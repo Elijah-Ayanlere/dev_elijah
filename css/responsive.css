@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+@media (max-width: 1040px) {
+	.perker_topbar .mainpart{background-color: #020312;}
+	.perker_topbar .menu{display: none;}
+	.perker_topbar .trigger{display: block;}
+	.perker_hero_wrap .hero_texts h3{font-size: 55px;}
+	.perker_about_wrap .about_inner{flex-direction: column;}
+	.perker_about_wrap .about_inner .leftpart{display: none;}
+	.perker_about_wrap .about_inner .rightpart{width: 100%;}
+	.perker_services_wrap .service_list ul li{width: 50%;}
+	.perker_portfolio .portfolio_list ul li{width: 50%;}
+	.perker_resume .resume_list ul li{width: 50%;}
+	.perker_skills_wrap .skills_inner{flex-direction: column;}
+	.perker_skills_wrap .skills_inner .left{padding-right: 0px;width: 100%;margin-bottom: 30px;}
+	.perker_skills_wrap .skills_inner .right{padding-left: 0px;width: 100%;}
+	.perker_team .team_list ul li{width: 50%;}
+	.perker_pricing .pricing_list > ul > li{width: 50%;}
+	.perker_news .news_list ul li{width: 50%;}
+	.perker_contact .contact_inner{flex-direction: column;}
+	.perker_contact .contact_inner .left{width: 100%;margin-bottom: 30px;}
+	.perker_contact .contact_inner .right{width: 100%;}
+	.perker_footer .footer_inner{flex-direction: column;}
+	.perker_footer .footer_inner .left{margin-bottom: 10px;}
+	.perker_intro_inner{padding-left: 20px;padding-right: 20px;}
+	.perker_intro_inner > ul > li{width: 50%;}
+	.perker_intro_inner .features ul li{width: 50%;}
+}
+@media (max-width: 768px) {
+	.perker_hero_wrap{background-image: url(img/hero/Elijah.jpeg); background-size: cover; background-position: -650px;}
+	.perker_hero_wrap .hero_texts h3{font-size: 50px;}
+	.perker_about_wrap .about_inner .rightpart .info_list ul li{width: 100%;}
+	.perker_services_wrap .service_list ul{margin-left: 0px;}
+	.perker_portfolio .portfolio_list ul{margin-left: 0px;}
+	.perker_portfolio .portfolio_list ul li{width: 100%;padding-left: 0px;}
+	.perker_services_wrap .service_list ul li{width: 100%;padding-left: 0px;}
+	.perker_about_wrap .about_inner .rightpart .about_title h3{font-size: 30px;}
+	.perker_title_holder h3{font-size: 30px;}
+	.perker_resume .resume_list ul li{width: 100%;padding-left: 0px;}
+	.perker_resume .resume_list ul{margin-left: 0px;}
+	.perker_skills_wrap .skills_inner .left h3{font-size: 30px;}
+	.perker_team .team_list ul li{width: 100%;padding-left: 0px;}
+	.perker_team .team_list ul{margin-left: 0px;}
+	.perker_pricing .pricing_list > ul > li{width: 100%;padding-left: 0px;}
+	.perker_pricing .pricing_list > ul{margin-left: 0px;}
+	.perker_news .news_list ul li{width: 100%;padding-left: 0px;}
+	.perker_news .news_list ul{margin-left: 0px;}
+	.perker_contact .contact_inner .right .first_row ul li{width: 100%;padding-left: 0px;}
+	.perker_contact .contact_inner .right .first_row ul{margin-left: 0px;}
+	.perker_intro_inner > ul > li{width: 100%;padding-left: 0px;}
+	.perker_intro_inner > ul{margin-left: 0px;}
+	.perker_intro_inner .features ul li{width: 100%;padding-left: 0px;}
+	.perker_intro_inner .features ul{margin-left: 0px;}
+}
+@media (max-width: 480px) {
+	.perker_hero_wrap .hero_texts h3{font-size: 45px;}
+}
