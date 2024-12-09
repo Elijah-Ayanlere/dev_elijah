@@ -1,0 +1,1199 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dev Elijah | Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Introduction to Data Science" />
+	<meta property="og:description" content="Explore the fascinating world of Data Science and how it transforms raw data into actionable insights, leveraging tools like Python, Pandas, and Machine Learning." />
+	<meta property="og:image" content="img/blog/data-science.jpg" />
+	<meta property="og:url" content="" />
+	<meta property="og:type" content="article" />
+	
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Saira:300,400,500,600,700&amp;display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:300i,400,400i,600,600i,700&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="icon" href="img/logo/submark_logo-removebg-preview .png">
+	<!-- /Fonts -->
+	<!-- hericon cdn link -->
+	<link href="https://cdn.jsdelivr.net/npm/heroicons@1.0.6/dist/heroicons.min.css" rel="stylesheet">
+	<!-- font awesome cdn link -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+	<!-- Styles -->
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+	<!-- /Styles -->
+
+	<!-- tailwind css cdn link -->
+	<script src="https://cdn.tailwindcss.com"></script>	
+
+	<style>
+			/* Initial clip-path for the hero_texts element */
+		.hero_texts {
+			clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+		}
+
+		/* Final clip-path when the 'animate' class is added */
+		.hero_texts.animate {
+			clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 50% 100%, 100% 100%, 100% 0%);
+		}
+	</style>
+	
+</head>
+<body>
+
+	<!-- Preloader -->
+	<div class="perker_loader-wrapper">
+		<div class="loader-container">
+			<img src="img/logo/5-removebg-preview.png" alt="iTech Team Logo" class="loader-logo" />
+			<div class="loader"></div>
+		</div>
+	</div>	
+	<!-- /Preloader -->
+
+	<!-- Wrapper All -->
+	<div class="perker_wrap_all">
+		
+		<!-- Topbar -->
+		<div class="perker_topbar">
+			<div class="mainpart">
+			  <div class="container">
+				<div class="inner">
+				  <div class="logo">
+					<a href="index.html"><img src="img/logo/1-removebg-preview.png" alt="" width="30%" /></a>
+				  </div>
+				  	<div class="menu">
+						<ul>
+							<li><a href="#" onclick="redirectToHome()">Home</a></li>
+							<li class="relative group">
+								<a href="#" class="font-bold">Blog</a>
+								<ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-[#07081f] shadow-lg w-64 py-2 text-white">
+									<li><a href="#" onclick="redirectToPage('introduction-to-web-development.html')" class="block px-4 py-2">Website Development</a></li>
+									<li><a href="#" onclick="redirectToPage('introduction-to-data-engineering.html')" class="block px-4 py-2">Data Engineering</a></li>
+									<li><a href="#" onclick="redirectToPage('introduction-to-data-analytics.html')" class="block px-4 py-2">Data Analytics</a></li>
+									<li><a href="#" onclick="redirectToPage('introduction-to-machine-learning-ai.html')" class="block px-4 py-2">Machine Learning</a></li>
+									<li><a href="#" onclick="redirectToPage('introduction-to-data-science.html')" class="block px-4 py-2">Data Science</a></li>
+									<li><a href="#" onclick="redirectToPage('version-control-git-github.html')" class="block px-4 py-2">Version Control System</a></li>
+								</ul>
+							</li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>	
+				  	</div>
+				  <div class="trigger">
+					<span class="menu"><a href="#">Menu</a></span>
+					<span class="close"><a href="#">Close</a></span>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  
+			<div class="dropdown">
+			  <div class="container">
+				<div class="main">
+					<ul>
+                        <li><a href="#" onclick="redirectToHome()">Home</a></li>
+                        <li class="relative group">
+                            <a href="#" class="font-bold">Blog</a>
+                            <ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-[#07081f] shadow-lg w-64 py-2 text-white">
+                                <li><a href="#" onclick="redirectToPage('introduction-to-web-development.html')" class="block px-4 py-2">Website Development</a></li>
+                                <li><a href="#" onclick="redirectToPage('introduction-to-data-engineering.html')" class="block px-4 py-2">Data Engineering</a></li>
+                                <li><a href="#" onclick="redirectToPage('introduction-to-data-analytics.html')" class="block px-4 py-2">Data Analytics</a></li>
+                                <li><a href="#" onclick="redirectToPage('introduction-to-machine-learning-ai.html')" class="block px-4 py-2">Machine Learning</a></li>
+                                <li><a href="#" onclick="redirectToPage('introduction-to-data-science.html')" class="block px-4 py-2">Data Science</a></li>
+                                <li><a href="#" onclick="redirectToPage('version-control-git-github.html')" class="block px-4 py-2">Version Control System</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>	
+				</div>
+			  </div>
+			</div>
+		</div>
+		<!-- /Topbar -->
+
+		<div class="relative bg-cover bg-center bg-no-repeat h-screen pt-16 z-[-1]" style="background-image: url('img/blog/Data\ Science/data-scienc-and-artificial-intelligence-570x380.jpg');">
+            <div class="absolute inset-0 bg-[#07081f] bg-opacity-70 flex items-center justify-center">
+                <div 
+                    class="hero_texts relative z-10 text-center px-4 transition-[clip-path] duration-[1500ms] ease-in-out"
+                    id="heroTexts"
+                >
+                    <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white">
+                        Introduction to Data Science
+                    </h1>
+                    <p class="subtitle text-lg uppercase font-semibold text-gray-300 mt-2">
+                        Explore the fascinating world of Data Science and how it transforms raw data into actionable insights.
+                    </p>
+                </div>
+            </div>
+        </div>		
+        
+        <div class="max-w-5xl mx-auto p-8 opacity-0 transform translate-y-20 transition-all duration-700 ease-in-out" id="dataScienceSection">
+            <!-- Title Section -->
+            <h1 class="text-center text-3xl lg:text-4xl font-bold mb-8" id="blogTitle">
+                Introduction to Data Science
+            </h1>
+        
+            <p class="text-lg lg:text-xl mb-6 font-semibold">
+                Data Science is an interdisciplinary field that combines statistics, programming, and domain expertise to extract meaningful insights from data. It plays a crucial role in solving real-world problems, driving decisions, and making an impactful change across industries.
+            </p>
+        
+            <!-- Image Placeholder -->
+            <div class="mb-6">
+                <img src="img/blog/Data Science/introduction to data science.jpg" alt="Introduction to Data Science" class="w-full h-auto rounded-lg shadow-md mx-auto" />
+            </div>
+        
+            <!-- What is Data Science? -->
+            <h2 class="text-2xl lg:text-3xl font-bold mb-4">What is Data Science?</h2>
+            <p class="text-lg lg:text-xl mb-6">
+                Data Science is the art and science of analyzing large amounts of data to discover patterns, trends, and actionable insights. It involves using techniques like machine learning, data visualization, and statistical modeling to answer critical questions and solve challenges.
+            </p>
+        
+            <!-- Importance of Data Science -->
+            <h2 class="text-2xl lg:text-3xl font-bold mb-4">Why is Data Science Important?</h2>
+            <p class="text-lg lg:text-xl mb-6">
+                Data Science is transforming industries by enabling:
+            </p>
+            <ul class="list-disc pl-6 text-lg lg:text-xl mb-6">
+                <li><strong>Data-Driven Decisions:</strong> Helping organizations base decisions on evidence rather than intuition.</li>
+                <li><strong>Efficiency Improvements:</strong> Automating processes and optimizing operations.</li>
+                <li><strong>Innovation:</strong> Enabling breakthroughs in healthcare, finance, e-commerce, and beyond.</li>
+            </ul>
+        
+            <!-- Image Placeholder -->
+            <div class="mb-6">
+                <img src="img/blog/Data Science/Impact of Data Science.png" alt="Impact of Data Science" class="w-full h-auto rounded-lg shadow-md mx-auto" />
+            </div>
+        
+            <!-- Key Components of Data Science -->
+            <h2 class="text-2xl lg:text-3xl font-bold mb-4">Key Components of Data Science</h2>
+            <p class="text-lg lg:text-xl mb-6">
+                Data Science integrates various disciplines to create powerful insights. Some key components are:
+            </p>
+            <ul class="list-disc pl-6 text-lg lg:text-xl mb-6">
+                <li><strong>Data Collection:</strong> Gathering data from sources like databases, APIs, or sensors.</li>
+                <li><strong>Data Cleaning:</strong> Removing inconsistencies and preparing data for analysis.</li>
+                <li><strong>Exploratory Data Analysis:</strong> Visualizing and understanding data patterns.</li>
+                <li><strong>Modeling and Prediction:</strong> Using algorithms to predict outcomes and make decisions.</li>
+                <li><strong>Communication:</strong> Presenting results effectively through visualizations and storytelling.</li>
+            </ul>
+        
+            <!-- Image Placeholder -->
+            <div class="mb-6">
+                <img src="img/blog/Data Science/components-of-data-science.webp" alt="Key Components of Data Science" class="w-full h-auto rounded-lg shadow-md mx-auto" />
+            </div>
+        
+            <!-- Tools and Techniques in Data Science -->
+            <h2 class="text-2xl lg:text-3xl font-bold mb-4">Tools and Techniques in Data Science</h2>
+            <p class="text-lg lg:text-xl mb-6">
+                Data Scientists use various tools and techniques to process and analyze data efficiently. Some popular ones include:
+            </p>
+            <ul class="list-disc pl-6 text-lg lg:text-xl mb-6">
+                <li><strong>Python:</strong> A versatile language with libraries like Pandas, NumPy, and Scikit-learn.</li>
+                <li><strong>R:</strong> A tool for statistical computing and visualization.</li>
+                <li><strong>SQL:</strong> For querying and managing databases.</li>
+                <li><strong>Tableau/Power BI:</strong> Tools for data visualization and dashboards.</li>
+                <li><strong>Machine Learning Algorithms:</strong> Linear regression, decision trees, and clustering.</li>
+            </ul>
+        
+            <!-- Image Placeholder -->
+            <div class="mb-6">
+                <img src="img/blog/Data Science/languages used in ds.png" alt="Tools in Data Science" class="w-full h-auto rounded-lg shadow-md mx-auto" />
+            </div>
+        
+            <!-- Applications of Data Science -->
+            <h2 class="text-2xl lg:text-3xl font-bold mb-4">Applications of Data Science</h2>
+            <p class="text-lg lg:text-xl mb-6">
+                Data Science is reshaping industries. Some notable applications include:
+            </p>
+            <ul class="list-disc pl-6 text-lg lg:text-xl mb-6">
+                <li><strong>Healthcare:</strong> Predicting diseases, personalized medicine, and medical imaging.</li>
+                <li><strong>Finance:</strong> Fraud detection, risk management, and algorithmic trading.</li>
+                <li><strong>E-commerce:</strong> Recommender systems and customer behavior analysis.</li>
+                <li><strong>Manufacturing:</strong> Predictive maintenance and quality control.</li>
+            </ul>
+        
+            <!-- Image Placeholder -->
+            <div class="mb-6">
+                <img src="img/blog/Data Science/applications-of-data-science.png" alt="Applications of Data Science" class="w-full h-auto rounded-lg shadow-md mx-auto" />
+            </div>
+        
+            <!-- Learning Data Science -->
+            <h2 class="text-2xl lg:text-3xl font-bold mb-4">How to Learn Data Science</h2>
+            <p class="text-lg lg:text-xl mb-6">
+                Embarking on a Data Science journey requires a mix of technical, analytical, and problem-solving skills. Here are some recommended platforms and resources to help you get started:
+            </p>
+
+            <ul class="list-disc pl-6 text-lg lg:text-xl mb-6">
+                <li>
+                    <strong>
+                        <a href="https://www.coursera.org/" class="text-blue-600 underline" target="_blank">Coursera</a>:
+                    </strong>
+                    Offers comprehensive courses such as "Data Science Specialization" by Johns Hopkins University and "Applied Data Science with Python" by the University of Michigan.
+                </li>
+                <li>
+                    <strong>
+                        <a href="https://www.udemy.com/" class="text-blue-600 underline" target="_blank">Udemy</a>:
+                    </strong>
+                    Provides affordable courses like "Python for Data Science and Machine Learning Bootcamp" and "Data Analysis with Pandas and Python."
+                </li>
+                <li>
+                    <strong>
+                        <a href="https://www.edx.org/" class="text-blue-600 underline" target="_blank">edX</a>:
+                    </strong>
+                    Features programs like "Data Science MicroMasters" by MIT and "Professional Certificate in Data Science" by Harvard.
+                </li>
+                <li>
+                    <strong>
+                        <a href="https://www.kaggle.com/" class="text-blue-600 underline" target="_blank">Kaggle</a>:
+                    </strong>
+                    Offers datasets, tutorials, and competitions to practice and showcase your data science skills.
+                </li>
+                <li>
+                    <strong>
+                        <a href="https://www.datacamp.com/" class="text-blue-600 underline" target="_blank">DataCamp</a>:
+                    </strong>
+                    Provides interactive courses on Python, R, SQL, and data visualization tailored for Data Science learners.
+                </li>
+                <li>
+                    <strong>
+                        <a href="https://www.fast.ai/" class="text-blue-600 underline" target="_blank">Fast.ai</a>:
+                    </strong>
+                    A free resource offering practical deep learning and data science courses.
+                </li>
+                <li>
+                    <strong>
+                        <a href="https://developers.google.com/machine-learning/" class="text-blue-600 underline" target="_blank">Google AI</a>:
+                    </strong>
+                    Provides free tutorials and guides to enhance your machine learning and data science expertise.
+                </li>
+                <li>
+                    <strong>
+                        <a href="https://www.linkedin.com/learning/" class="text-blue-600 underline" target="_blank">LinkedIn Learning</a>:
+                    </strong>
+                    Offers curated courses on data analytics, visualization, and advanced data science topics.
+                </li>
+                <li>
+                    <strong>
+                        <a href="https://towardsdatascience.com/" class="text-blue-600 underline" target="_blank">Towards Data Science</a>:
+                    </strong>
+                    A Medium publication with insightful blogs, tutorials, and case studies.
+                </li>
+                <li>
+                    <strong>
+                        <a href="https://www.analyticsvidhya.com/" class="text-blue-600 underline" target="_blank">Analytics Vidhya</a>:
+                    </strong>
+                    Offers practical guides, hackathons, and training programs for aspiring data scientists.
+                </li>
+            </ul>
+            <p class="text-lg lg:text-xl mb-6 font-semibold">
+                These platforms provide a blend of theory and hands-on practice, equipping you with the skills to excel in the field of Data Science.
+            </p>
+        
+            <!-- Conclusion -->
+            <h2 class="text-2xl lg:text-3xl font-bold mb-4">Conclusion</h2>
+            <p class="text-lg lg:text-xl mb-6">
+                Data Science is a transformative field that empowers individuals and organizations to make data-driven decisions. Whether you're looking to solve critical problems, drive innovation, or enhance your career, mastering Data Science will open endless opportunities.
+            </p>
+        </div>        
+
+			<div class="flex justify-center items-center mt-8">
+				<!-- view butoon -->
+				<div class="flex items-center mr-6">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-8 h-8 text-gray-400">
+					  <path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/>
+					</svg>
+					<span id="viewCount" class="ml-2 text-gray-400">0</span>
+				</div>
+
+				<!-- Like Button -->
+				<button id="likeBtn" class="flex items-center mr-6">
+					<svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-8 h-8 hover:scale-110 transition duration-300">
+					  <!-- Empty heart path -->
+					  <path id="heartPath"
+						fill="none" 
+						stroke="currentColor" 
+						stroke-width="20" 
+						class="text-gray-400 border-8"
+						d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z">
+					  </path>
+					</svg>
+					<span id="likeCount" class="ml-2 text-gray-400">0</span>
+				</button>	
+		
+				<!-- Share Button -->
+				<div class="relative">
+					<button id="mainShareBtn" class="flex items-center">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-8 h-8 text-gray-400 transition duration-300">
+						<path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z" />
+					</svg>
+					<span id="mainShareCount" class="ml-2 text-gray-400">0</span>
+					</button>
+				
+					<!-- Share Modal (Tailwind classes for visibility control) -->
+					<div id="mainShareModal" class="absolute hidden mt-2 justify-center items-center transform -translate-x-1/2 sm:left-auto sm:right-0 sm:mt-0 sm:translate-x-0 bg-[#07081f] p-4 rounded-lg shadow-lg w-80">
+						<h3 class="text-lg text-white font-semibold mb-4">Share this Blog</h3>
+						<div class="flex justify-around">
+						  <a href="https://www.facebook.com/sharer/sharer.php?u=" id="facebookShare" class="text-blue-600 hover:text-blue-800">
+							<i class="fab fa-facebook-f w-6 h-6"></i>
+						  </a>
+						  <a href="https://wa.me/?text=" id="whatsappShare" class="text-green-500 hover:text-green-700">
+							<i class="fab fa-whatsapp w-6 h-6"></i>
+						  </a>
+						  <a href="https://twitter.com/intent/tweet?text=" id="twitterShare" class="text-blue-400 hover:text-blue-600">
+							<i class="fab fa-twitter w-6 h-6"></i>
+						  </a>
+						  <a href="https://www.linkedin.com/sharing/share-offsite/?url=" id="linkedinShare" class="text-blue-700 hover:text-blue-900">
+							<i class="fab fa-linkedin-in w-6 h-6"></i>
+						  </a>
+						</div>
+					</div>					  
+				</div>  
+  
+			</div>
+		
+			<div class="flex justify-center mt-8">
+				<a href="index.html">
+					<button class="bg-[#ea3509] text-white px-6 py-2 text-xl font-bold rounded-xl h-10 w-32 lg:h-12 lg:w-64 shadow-md hover:bg-[#050f5a] transition duration-300 h-16 mx-auto block">
+						Back
+					</button>
+				</a>
+			</div>
+		</div>
+		
+		<div class="perker_section" id="news">
+			<div class="perker_news">
+				<div class="container">
+					<div class="perker_title_holder">
+						<h3>Latest Blog</h3>
+					</div>
+					<div class="news_list perker_appear">
+                        <ul>
+                            <li class="blog-card" data-blog-id="blog26">
+                                <div class="inner">
+                                    <div class="image">
+                                        <img src="img/blog/Data Science/learn-Python-for-data-science.webp" alt="Mastering Python for Data Science: From Basics to Advanced Applications" class="w-full h-auto" />
+                                        <div class="main" data-img-url="img/blog/Data Science/learn-Python-for-data-science.webp"></div>
+                                        <a class="link" href="python-for-data-science.html" class="read-more-btn" aria-label="Mastering Python for Data Science: From Basics to Advanced Applications"></a>
+                                    </div>
+                                    <div class="texts">
+                                        <div class="date">
+                                            <span>Dec 09, 2024 in <a href="#">Data Science</a></span>
+                                        </div>
+                                        <div class="title">
+                                            <h3><a href="python-for-data-science.html" class="read-more-btn">Mastering Python for Data Science: From Basics to Advanced Applications</a></h3>
+                                        </div>
+                                        <div class="date mt-[-10px]">
+                                            <span>Author: <a href="index.html">Dev. Elijah</a></span>
+                                        </div>
+                                        <div class="flex justify-center items-center mt-4 mb-6 mr-2 lg:mr-12 space-x-6 sm:space-x-3">
+                                            <!-- View Button -->
+                                            <div class="flex items-center sm:mr-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-6 h-6 text-gray-400">
+                                                    <path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/>
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                    <span id="viewCount-blog26" class="text-ellipsis">0</span>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Like Button -->
+                                            <button id="likeBtn-blog26" class="flex items-center sm:mr-3">
+                                                <svg id="heartIcon-blog26" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 hover:scale-110 transition duration-300">
+                                                    <path id="heartPath"
+                                                    fill="none" 
+                                                    stroke="currentColor" 
+                                                    stroke-width="20" 
+                                                    class="text-gray-400 border-8"
+                                                    d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z">
+                                                    </path>
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                    <span id="likeCount-blog26" class="text-ellipsis">0</span>
+                                                </div>
+                                            </button>
+                                    
+                                            <!-- Share Button -->
+                                            <div class="relative">
+                                                <button id="shareBtn-blog26" class="flex items-center sm:mr-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6 text-gray-400 transition duration-300">
+                                                        <path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z" />
+                                                    </svg>
+                                                    <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                        <span id="shareCount-blog26" class="text-ellipsis">0</span>
+                                                    </div>
+                                                </button>
+                                    
+                                                <!-- Share Modal (Tailwind classes for visibility control) -->
+                                                <div id="shareModal-blog26" class="absolute hidden mt-2 justify-center items-center transform -translate-x-1/2 sm:left-auto sm:right-0 sm:mt-0 sm:translate-x-0 bg-[#07081f] p-4 rounded-lg shadow-lg sm:w-72 w-80">
+                                                    <h3 class="text-lg text-white font-semibold mb-4">Share this Blog</h3>
+                                                    <div class="flex justify-around">
+                                                        <a href="https://www.facebook.com/sharer/sharer.php?u=" id="facebookShare" class="text-blue-600 hover:text-blue-800">
+                                                            <i class="fab fa-facebook-f w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://wa.me/?text=" id="whatsappShare" class="text-green-500 hover:text-green-700">
+                                                            <i class="fab fa-whatsapp w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://twitter.com/intent/tweet?text=" id="twitterShare" class="text-blue-400 hover:text-blue-600">
+                                                            <i class="fab fa-twitter w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=" id="linkedinShare" class="text-blue-700 hover:text-blue-900">
+                                                            <i class="fab fa-linkedin-in w-6 h-6"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="def">
+                                            <p>Learn how Python empowers data scientists to analyze, visualize, and build advanced models.</p>
+                                        </div>
+                                        <div class="perker_button">
+                                            <a href="python-for-data-science.html" class="read-more-btn" class="text-blue-500 hover:underline">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="blog-card" data-blog-id="blog11">
+                                <div class="inner">
+                                    <div class="image">
+                                        <img src="img/blog/Data Engineering/interactive data analytics.webp" alt="Interactive Data Analysis with IPython and Jupyter Notebooks" class="w-full h-auto" />
+                                        <div class="main" data-img-url="img/blog/data-engineering.jpg"></div>
+                                        <a class="link" href="interactive-data-analysis-ipython.html" class="read-more-btn" aria-label="Interactive Data Analysis with IPython and Jupyter Notebooks"></a>
+                                    </div>
+                                    <div class="texts">
+                                        <div class="date">
+                                            <span>Dec 07, 2024 in <a href="#">Data Engineering</a></span>
+                                        </div>
+                                        <div class="title">
+                                            <h3><a href="interactive-data-analysis-ipython.html" class="read-more-btn">Interactive Data Analysis with IPython and Jupyter Notebooks</a></h3>
+                                        </div>
+                                        <div class="date mt-[-10px]">
+                                            <span>Author: <a href="index.html">Dev. Elijah</a></span>
+                                        </div>
+                                        <div class="flex justify-center items-center mt-4 mb-6 mr-2 lg:mr-12 space-x-6 sm:space-x-3">
+                                            <!-- View Button -->
+                                            <div class="flex items-center sm:mr-3">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-6 h-6 text-gray-400">
+                                                <path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/>
+                                            </svg>
+                                            <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                <span id="viewCount-blog11" class="text-ellipsis">0</span>
+                                            </div>
+                                            </div>
+                                        
+                                            <!-- Like Button -->
+                                            <button id="likeBtn-blog11" class="flex items-center sm:mr-3">
+                                            <svg id="heartIcon-blog11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 hover:scale-110 transition duration-300">
+                                                <path id="heartPath"
+                                                fill="none" 
+                                                stroke="currentColor" 
+                                                stroke-width="20" 
+                                                class="text-gray-400 border-8"
+                                                d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z">
+                                                </path>
+                                            </svg>
+                                            <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                <span id="likeCount-blog11" class="text-ellipsis">0</span>
+                                            </div>
+                                            </button>
+                                        
+                                            <!-- Share Button -->
+                                            <div class="relative">
+                                            <button id="shareBtn-blog11" class="flex items-center sm:mr-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6 text-gray-400 transition duration-300">
+                                                <path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z" />
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                <span id="shareCount-blog11" class="text-ellipsis">0</span>
+                                                </div>
+                                            </button>
+                                        
+                                            <!-- Share Modal (Tailwind classes for visibility control) -->
+                                                <div id="shareModal-blog11" class="absolute hidden mt-2 justify-center items-center transform -translate-x-1/2 sm:left-auto sm:right-0 sm:mt-0 sm:translate-x-0 bg-[#07081f] p-4 rounded-lg shadow-lg sm:w-72 w-80">
+                                                    <h3 class="text-lg text-white font-semibold mb-4">Share this Blog</h3>
+                                                    <div class="flex justify-around">
+                                                    <a href="https://www.facebook.com/sharer/sharer.php?u=" id="facebookShare" class="text-blue-600 hover:text-blue-800">
+                                                        <i class="fab fa-facebook-f w-6 h-6"></i>
+                                                    </a>
+                                                    <a href="https://wa.me/?text=" id="whatsappShare" class="text-green-500 hover:text-green-700">
+                                                        <i class="fab fa-whatsapp w-6 h-6"></i>
+                                                    </a>
+                                                    <a href="https://twitter.com/intent/tweet?text=" id="twitterShare" class="text-blue-400 hover:text-blue-600">
+                                                        <i class="fab fa-twitter w-6 h-6"></i>
+                                                    </a>
+                                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=" id="linkedinShare" class="text-blue-700 hover:text-blue-900">
+                                                        <i class="fab fa-linkedin-in w-6 h-6"></i>
+                                                    </a>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                        <div class="def">
+                                            <p>Dive into using IPython for exploratory data analysis and building reusable code snippets.</p>
+                                        </div>
+                                        <div class="perker_button">
+                                            <a href="interactive-data-analysis-ipython.html" class="read-more-btn" class="text-blue-500 hover:underline">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="blog-card" data-blog-id="blog14">
+                                <div class="inner">
+                                    <div class="image">
+                                        <img src="img/blog/Data Analytics/python-and-pandas.webp" alt="The Role of Python in Data Analytics: A Deep Dive into Pandas, NumPy, and Matplotlib" class="w-full h-auto" />
+                                        <div class="main" data-img-url="img/blog/Data Analytics/python-and-pandas.webp"></div>
+                                        <a class="link" href="python-pandas-analytics.html" class="read-more-btn" aria-label="The Role of Python in Data Analytics: A Deep Dive into Pandas, NumPy, and Matplotlib"></a>
+                                    </div>
+                                    <div class="texts">
+                                        <div class="date">
+                                            <span>Dec 08, 2024 in <a href="#">Data Analytics</a></span>
+                                        </div>
+                                        <div class="title">
+                                            <h3><a href="python-pandas-analytics.html" class="read-more-btn">The Role of Python in Data Analytics: A Deep Dive into Pandas, NumPy, and Matplotlib</a></h3>
+                                        </div>
+                                          <div class="date mt-[-10px]">
+                                              <span>Author: <a href="index.html">Dev. Elijah</a></span>
+                                          </div>
+                                        <div class="flex justify-center items-center mt-4 mb-6 mr-2 lg:mr-12 space-x-6 sm:space-x-3">
+                                            <!-- View Button -->
+                                            <div class="flex items-center sm:mr-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-6 h-6 text-gray-400">
+                                                    <path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/>
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                    <span id="viewCount-blog14" class="text-ellipsis">0</span>
+                                                </div>
+                                            </div>
+                            
+                                            <!-- Like Button -->
+                                            <button id="likeBtn-blog14" class="flex items-center sm:mr-3">
+                                                <svg id="heartIcon-blog14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 hover:scale-110 transition duration-300">
+                                                    <path id="heartPath"
+                                                    fill="none" 
+                                                    stroke="currentColor" 
+                                                    stroke-width="20" 
+                                                    class="text-gray-400 border-8"
+                                                    d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z">
+                                                    </path>
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                    <span id="likeCount-blog14" class="text-ellipsis">0</span>
+                                                </div>
+                                            </button>
+                            
+                                            <!-- Share Button -->
+                                            <div class="relative">
+                                                <button id="shareBtn-blog14" class="flex items-center sm:mr-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6 text-gray-400 transition duration-300">
+                                                        <path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z" />
+                                                    </svg>
+                                                    <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                        <span id="shareCount-blog14" class="text-ellipsis">0</span>
+                                                    </div>
+                                                </button>
+                            
+                                                <!-- Share Modal (Tailwind classes for visibility control) -->
+                                                <div id="shareModal-blog14" class="absolute hidden mt-2 justify-center items-center transform -translate-x-1/2 sm:left-auto sm:right-0 sm:mt-0 sm:translate-x-0 bg-[#07081f] p-4 rounded-lg shadow-lg sm:w-72 w-80">
+                                                    <h3 class="text-lg text-white font-semibold mb-4">Share this Blog</h3>
+                                                    <div class="flex justify-around">
+                                                        <a href="https://www.facebook.com/sharer/sharer.php?u=" id="facebookShare" class="text-blue-600 hover:text-blue-800">
+                                                            <i class="fab fa-facebook-f w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://wa.me/?text=" id="whatsappShare" class="text-green-500 hover:text-green-700">
+                                                            <i class="fab fa-whatsapp w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://twitter.com/intent/tweet?text=" id="twitterShare" class="text-blue-400 hover:text-blue-600">
+                                                            <i class="fab fa-twitter w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=" id="linkedinShare" class="text-blue-700 hover:text-blue-900">
+                                                            <i class="fab fa-linkedin-in w-6 h-6"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                        <div class="def">
+                                            <p>Learn how Python's libraries like Pandas, NumPy, and Matplotlib play a crucial role in data analytics workflows.</p>
+                                        </div>
+                                        <div class="perker_button">
+                                            <a href="python-pandas-analytics.html" class="read-more-btn" class="text-blue-500 hover:underline">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                              </li>      
+                            <li class="blog-card" data-blog-id="blog23">
+                                <div class="inner">
+                                    <div class="image">
+                                        <img src="img/blog/Machine Learning/NLP.png" alt="Exploring NLP: Using Python to Analyze and Process Text Data" class="w-full h-auto" />
+                                        <div class="main" data-img-url="img/blog/Machine Learning/NLP.png"></div>
+                                        <a class="link" href="exploring-nlp-python-text-analysis.html" class="read-more-btn" aria-label="Exploring NLP: Using Python to Analyze and Process Text Data"></a>
+                                    </div>
+                                    <div class="texts">
+                                        <div class="date">
+                                            <span>Dec 09, 2024 in <a href="#">Natural Language Processing</a></span>
+                                        </div>
+                                        <div class="title">
+                                            <h3><a href="exploring-nlp-python-text-analysis.html" class="read-more-btn">Exploring NLP: Using Python to Analyze and Process Text Data</a></h3>
+                                        </div>
+                                        <div class="date mt-[-10px]">
+                                            <span>Author: <a href="index.html">Dev. Elijah</a></span>
+                                        </div>
+                                        <div class="flex justify-center items-center mt-4 mb-6 mr-2 lg:mr-12 space-x-6 sm:space-x-3">
+                                            <!-- View Button -->
+                                            <div class="flex items-center sm:mr-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-6 h-6 text-gray-400">
+                                                    <path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/>
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                    <span id="viewCount-blog23" class="text-ellipsis">0</span>
+                                                </div>
+                                            </div>
+                            
+                                            <!-- Like Button -->
+                                            <button id="likeBtn-blog23" class="flex items-center sm:mr-3">
+                                                <svg id="heartIcon-blog23" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 hover:scale-110 transition duration-300">
+                                                    <path id="heartPath"
+                                                    fill="none" 
+                                                    stroke="currentColor" 
+                                                    stroke-width="20" 
+                                                    class="text-gray-400 border-8"
+                                                    d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z">
+                                                    </path>
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                    <span id="likeCount-blog23" class="text-ellipsis">0</span>
+                                                </div>
+                                            </button>
+                            
+                                            <!-- Share Button -->
+                                            <div class="relative">
+                                                <button id="shareBtn-blog23" class="flex items-center sm:mr-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6 text-gray-400 transition duration-300">
+                                                        <path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z" />
+                                                    </svg>
+                                                    <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                        <span id="shareCount-blog23" class="text-ellipsis">0</span>
+                                                    </div>
+                                                </button>
+                            
+                                                <!-- Share Modal (Tailwind classes for visibility control) -->
+                                                <div id="shareModal-blog23" class="absolute hidden mt-2 justify-center items-center transform -translate-x-1/2 sm:left-auto sm:right-0 sm:mt-0 sm:translate-x-0 bg-[#07081f] p-4 rounded-lg shadow-lg sm:w-72 w-80">
+                                                    <h3 class="text-lg text-white font-semibold mb-4">Share this Blog</h3>
+                                                    <div class="flex justify-around">
+                                                        <a href="https://www.facebook.com/sharer/sharer.php?u=" id="facebookShare" class="text-blue-600 hover:text-blue-800">
+                                                            <i class="fab fa-facebook-f w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://wa.me/?text=" id="whatsappShare" class="text-green-500 hover:text-green-700">
+                                                            <i class="fab fa-whatsapp w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://twitter.com/intent/tweet?text=" id="twitterShare" class="text-blue-400 hover:text-blue-600">
+                                                            <i class="fab fa-twitter w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=" id="linkedinShare" class="text-blue-700 hover:text-blue-900">
+                                                            <i class="fab fa-linkedin-in w-6 h-6"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                        <div class="def">
+                                            <p>Learn how to use Python for text processing, sentiment analysis, and other NLP techniques to extract valuable insights from textual data.</p>
+                                        </div>
+                                        <div class="perker_button">
+                                            <a href="exploring-nlp-python-text-analysis.html" class="read-more-btn" class="text-blue-500 hover:underline">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>                
+                            <li class="blog-card" data-blog-id="blog27">
+                                <div class="inner">
+                                    <div class="image">
+                                        <img src="img/blog/Data Science/seaborn.jpg" alt="Using Seaborn for Advanced Data Visualization" class="w-full h-auto" />
+                                        <div class="main" data-img-url="img/blog/Data Science/seaborn.jpg"></div>
+                                        <a class="link" href="using-seaborn-advanced-visualization.html" class="read-more-btn" aria-label="Using Seaborn for Advanced Data Visualization"></a>
+                                    </div>
+                                    <div class="texts">
+                                        <div class="date">
+                                            <span>Dec 09, 2024 in <a href="#">Data Visualization</a></span>
+                                        </div>
+                                        <div class="title">
+                                            <h3><a href="using-seaborn-advanced-visualization.html" class="read-more-btn">Using Seaborn for Advanced Data Visualization: Tips and Tricks</a></h3>
+                                        </div>
+                                        <div class="date mt-[-10px]">
+                                            <span>Author: <a href="index.html">Dev. Elijah</a></span>
+                                        </div>
+                                        <div class="flex justify-center items-center mt-4 mb-6 mr-2 lg:mr-12 space-x-6 sm:space-x-3">
+                                            <!-- View Button -->
+                                            <div class="flex items-center sm:mr-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-6 h-6 text-gray-400">
+                                                    <path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/>
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                    <span id="viewCount-blog27" class="text-ellipsis">0</span>
+                                                </div>
+                                            </div>
+                            
+                                            <!-- Like Button -->
+                                            <button id="likeBtn-blog27" class="flex items-center sm:mr-3">
+                                                <svg id="heartIcon-blog27" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 hover:scale-110 transition duration-300">
+                                                    <path id="heartPath"
+                                                    fill="none" 
+                                                    stroke="currentColor" 
+                                                    stroke-width="20" 
+                                                    class="text-gray-400 border-8"
+                                                    d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z">
+                                                    </path>
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                    <span id="likeCount-blog27" class="text-ellipsis">0</span>
+                                                </div>
+                                            </button>
+                            
+                                            <!-- Share Button -->
+                                            <div class="relative">
+                                                <button id="shareBtn-blog27" class="flex items-center sm:mr-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6 text-gray-400 transition duration-300">
+                                                        <path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z" />
+                                                    </svg>
+                                                    <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                        <span id="shareCount-blog27" class="text-ellipsis">0</span>
+                                                    </div>
+                                                </button>
+                            
+                                                <!-- Share Modal (Tailwind classes for visibility control) -->
+                                                <div id="shareModal-blog27" class="absolute hidden mt-2 justify-center items-center transform -translate-x-1/2 sm:left-auto sm:right-0 sm:mt-0 sm:translate-x-0 bg-[#07081f] p-4 rounded-lg shadow-lg sm:w-72 w-80">
+                                                    <h3 class="text-lg text-white font-semibold mb-4">Share this Blog</h3>
+                                                    <div class="flex justify-around">
+                                                        <a href="https://www.facebook.com/sharer/sharer.php?u=" id="facebookShare" class="text-blue-600 hover:text-blue-800">
+                                                            <i class="fab fa-facebook-f w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://wa.me/?text=" id="whatsappShare" class="text-green-500 hover:text-green-700">
+                                                            <i class="fab fa-whatsapp w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://twitter.com/intent/tweet?text=" id="twitterShare" class="text-blue-400 hover:text-blue-600">
+                                                            <i class="fab fa-twitter w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=" id="linkedinShare" class="text-blue-700 hover:text-blue-900">
+                                                            <i class="fab fa-linkedin-in w-6 h-6"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                        <div class="def">
+                                            <p>Explore advanced tips and tricks for creating visually appealing and informative plots using Seaborn, focusing on customizing plots, handling categorical data, and making complex visualizations more insightful.</p>
+                                        </div>
+                                        <div class="perker_button">
+                                            <a href="using-seaborn-advanced-visualization.html" class="read-more-btn" class="text-blue-500 hover:underline">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+			</div>
+		</div>	
+
+        <!-- Contact -->
+		<div class="perker_section" id="contact">
+			<div class="perker_contact">
+				<div class="container">
+					<div class="perker_title_holder">
+						<span class="title">Contact</span>
+						<h3>Get In Touch</h3>
+					</div>
+					<div class="contact_inner">
+						<div class="left">
+							<ul>
+								<li>
+									<div class="inner">
+										<img class="svg" src="img/svg/placeholder.svg" alt="" />
+										<span>Ogbomoso, Oyo State, Nigeria</span>
+									</div>
+								</li>
+								<li>
+									<div class="inner">
+										<img class="svg" src="img/svg/telephone.svg" alt="" />
+										<span>+234 (0) 701 608 5426</span>
+									</div>
+								</li>
+								<li>
+									<div class="inner">
+										<img class="svg" src="img/svg/envelope.svg" alt="" />
+										<span><a href="mailto:develijah3@gmail.com">develijah3@gmail.com</a></span>
+									</div>
+								</li>
+								<li>
+									<div class="inner">
+										<img class="svg" src="img/svg/telegram.svg" alt="" />
+										<span><a href="https://t.me/dev_elijah">Developer Elijah</a></span>
+									</div>
+								</li>
+								<li>
+									<div class="inner">
+										<img class="svg" src="img/svg/whatsapp.svg" alt="" />
+										<span><a href="https://wa.me/+2347016085426">Dev. Elijah</a></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<form action="https://formspree.io/xzbnbezl" method="POST" class="right">
+							<div class="first_row">
+								<ul class="input-box">
+									<li>
+										<input type="text" name="fullName" placeholder="Full Name" required />
+									</li>
+									<li>
+										<input type="email" name="emailAddress" placeholder="Email" required />
+									</li>
+									<li>
+										<input type="tel" name="mobileNumber" placeholder="Mobile Number with country code e.g +234" required />
+									</li>
+									<li>
+										<input type="text" name="emailSubject" placeholder="Email Subject" required />
+									</li>
+								</ul>
+							</div>
+							<div class="second_row">
+								<textarea name="message" id="" placeholder="Message" required></textarea>
+							</div>
+							<div class="perker_button">
+								<a href="#">
+									<button type="submit" value="Send Message" class="btn">Submit</button>
+								</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Contact -->
+		
+		<!-- Footer -->
+		<div class="perker_section">
+			<div class="perker_footer">
+				<div class="container">
+					<div class="footer_inner">
+						<div class="left text-center">
+							<p><a href="index.html" target="_blank" class="text-center">Copyright &copy; 2024 by Dev. Elijah | All Rights Reserved.</a></p>
+						</div>
+						<div class="right">
+							<ul>
+								<li><a href="https://www.facebook.com/elijah.ayanlere.7"><i class="xcon-facebook"></i></a></li>
+								<li><a href="https://x.com/Elijah_Ayanlere"><i class="xcon-twitter"></i></a></li>
+								<!-- <li><a href="#"><i class="xcon-linkedin"></i></a></li> -->
+								<li><a href="https://www.instagram.com/dev_elijah?igsh=aHhzZXgyc2FvY3Q4"><i class="xcon-instagram"></i></a></li>
+								<li><a href="https://github.com/Elijah-Ayanlere"><i class="fab fa-github"></i></a></li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /Footer -->
+	
+	</div>
+	<!-- /Wrapper All -->	
+
+<!-- Scripts -->
+<script src="js/jquery.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/init.js"></script>
+<script src="js/scripts.js"></script>
+<!-- /Scripts -->
+
+<script>
+	// Redirect to home page
+	function redirectToHome() {
+		window.location.href = "index.html"; // Replace 'home.html' with your actual home page path
+	}
+
+	// Redirect to a specific blog page
+	function redirectToPage(page) {
+		window.location.href = page;
+	}
+
+	window.addEventListener('load', function () {
+		// Hide the loader and show content after loading is complete
+		const loader = document.querySelector('.perker_loader-wrapper');
+		const heroText = document.querySelector('.hero_texts');
+		
+		// Add a delay before hiding the loader
+		setTimeout(() => {
+			document.querySelector('.perker_loader-wrapper').classList.add('hide-loader');
+		}, 3000); // Adjust the timeout to match the loader animation duration (in milliseconds)
+		
+		// Trigger the animation for the text after loader is hidden
+		setTimeout(function() {
+			heroText.classList.add('animate');
+		}, 3500); // Slight delay for smooth transition after the loader disappears
+	});
+
+	document.addEventListener("DOMContentLoaded", () => {
+        const targetSection = document.getElementById("dataScienceSection");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        targetSection.classList.add("opacity-100", "translate-y-0");
+                    }
+                });
+            },
+            {
+                threshold: 0.1, // Trigger when 20% of the section is visible
+            }
+        );
+
+        observer.observe(targetSection);
+    });
+
+	document.addEventListener('DOMContentLoaded', () => {
+		const blogId = 'blog25'; // Replace this with the actual blog ID dynamically
+		const viewCountElement = document.getElementById('viewCount');
+		const likeBtn = document.getElementById('likeBtn');
+		const likeCountElement = document.getElementById('likeCount');
+		const heartIcon = document.getElementById('heartIcon').querySelector('path');
+
+		// Helper function to format numbers
+		function formatNumber(value) {
+			if (value >= 1e12) {
+				return (value / 1e12).toFixed(1).replace(/\.0$/, '') + 'T';
+			} else if (value >= 1e9) {
+				return (value / 1e9).toFixed(1).replace(/\.0$/, '') + 'B';
+			} else if (value >= 1e6) {
+				return (value / 1e6).toFixed(1).replace(/\.0$/, '') + 'M';
+			} else if (value >= 1e3) {
+				return (value / 1e3).toFixed(1).replace(/\.0$/, '') + 'k';
+			}
+			return value.toString();
+		}
+
+		// Fetch the current view count for the specific blog
+		fetch(`/api/views/${blogId}`)
+			.then((response) => response.json())
+			.then((data) => {
+				viewCountElement.textContent = formatNumber(data.views);
+			})
+			.catch((error) => console.error('Error fetching views:', error));
+
+		// Increment the view count for the specific blog
+		fetch(`/api/views/${blogId}`, {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+		})
+			.then((response) => response.json())
+			.then((data) => {
+				viewCountElement.textContent = formatNumber(data.views); // Update the view count
+			})
+			.catch((error) => console.error('Error incrementing views:', error));
+
+		// Check if the user has already liked the blog
+		const hasLiked = localStorage.getItem(`hasLiked-${blogId}`) === 'true';
+
+		// Update the heart icon based on the user's like state
+		if (hasLiked) {
+			heartIcon.setAttribute('fill', '#ea3509'); // Fill the heart if liked
+		}
+
+		// Fetch the current like count for the specific blog
+		fetch(`/api/likes/${blogId}`)
+			.then((response) => response.json())
+			.then((data) => {
+				likeCountElement.textContent = formatNumber(data.likes);
+			})
+			.catch((error) => console.error('Error fetching likes:', error));
+
+		// Handle like button click
+		likeBtn.addEventListener('click', () => {
+			const currentlyLiked = localStorage.getItem(`hasLiked-${blogId}`) === 'true';
+
+			if (currentlyLiked) {
+				// User is unliking
+				fetch(`/api/unlike/${blogId}`, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+				})
+					.then((response) => response.json())
+					.then((data) => {
+						likeCountElement.textContent = formatNumber(data.likes); // Update like count
+						heartIcon.setAttribute('fill', 'none'); // Unfill the heart
+						localStorage.setItem(`hasLiked-${blogId}`, 'false'); // Update user state
+					})
+					.catch((error) => console.error('Error unliking:', error));
+			} else {
+				// User is liking
+				fetch(`/api/likes/${blogId}`, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+				})
+					.then((response) => response.json())
+					.then((data) => {
+						likeCountElement.textContent = formatNumber(data.likes); // Update like count
+						heartIcon.setAttribute('fill', '#ea3509'); // Fill the heart
+						localStorage.setItem(`hasLiked-${blogId}`, 'true'); // Update user state
+					})
+					.catch((error) => console.error('Error liking:', error));
+			}
+		});
+	});
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+		const blogId = 'blog25'; // Replace with dynamic blog ID
+		const shareBtn = document.getElementById("mainShareBtn");
+		const shareModal = document.getElementById("mainShareModal");
+		const shareCountElement = document.getElementById("mainShareCount"); // Add an element to display share count
+
+		// Get the current page URL
+		const currentUrl = window.location.href;
+		console.log("Current URL:", currentUrl); // Debugging line
+
+		// Get Open Graph meta tags for sharing
+		const blogTitle = document.querySelector('meta[property="og:title"]').getAttribute("content");
+		const blogDescription = document.querySelector('meta[property="og:description"]').getAttribute("content");
+		const blogImage = document.querySelector('meta[property="og:image"]').getAttribute("content");
+
+		// Debugging logs to check if the values are correct
+		console.log("Blog Title:", blogTitle);
+		console.log("Blog Description:", blogDescription);
+		console.log("Blog Image:", blogImage);
+
+		// Detect if it's a mobile device
+		const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+		// Custom message for desktop sharing
+		const desktopMessage = `Check out this amazing blog: "${blogTitle}" I found on Dev. Elijah's portfolio! ${blogDescription}`;
+		console.log("Desktop Message:", desktopMessage); // Debugging line
+
+		// Helper function to format numbers
+		function formatNumber(value) {
+			if (value >= 1e12) {
+				return (value / 1e12).toFixed(1).replace(/\.0$/, '') + 'T';
+			} else if (value >= 1e9) {
+				return (value / 1e9).toFixed(1).replace(/\.0$/, '') + 'B';
+			} else if (value >= 1e6) {
+				return (value / 1e6).toFixed(1).replace(/\.0$/, '') + 'M';
+			} else if (value >= 1e3) {
+				return (value / 1e3).toFixed(1).replace(/\.0$/, '') + 'k';
+			}
+			return value.toString();
+		}
+
+		// Fetch and display the current share count for the specific blog
+		 fetch(`/api/shares/${blogId}`)
+        .then((response) => response.json())
+        .then((data) => {
+            shareCountElement.textContent = formatNumber(data.shares);
+        })
+        .catch((error) => console.error('Error fetching share count:', error));
+
+		// Click event for the share button
+		shareBtn.addEventListener("click", () => {
+			if (isMobile) {
+				// Use the navigator.share API for mobile devices
+				if (navigator.share) {
+					navigator.share({
+						title: blogTitle,
+						text: desktopMessage,
+						url: currentUrl
+					})
+						.then(() => {
+							console.log("Shared successfully");
+							// Increment the share count after sharing
+							incrementShareCount();
+						})
+						.catch((error) => console.error("Error sharing", error));
+				} else {
+					alert("Sharing is not supported on this browser.");
+				}
+			} else {
+				// For desktop, show the modal with social media share links
+				shareModal.classList.remove("hidden");
+
+				// Check if the variables have the expected values before constructing links
+				if (currentUrl && desktopMessage && blogImage) {
+					// Construct URLs for social media share
+					const facebookLink = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}&quote=${encodeURIComponent(desktopMessage)}&picture=${encodeURIComponent(blogImage)}`;
+					const whatsappLink = `https://wa.me/?text=${encodeURIComponent(desktopMessage)}%20${encodeURIComponent(currentUrl)}`;
+					const twitterLink = `https://twitter.com/intent/tweet?text=${encodeURIComponent(desktopMessage)}&url=${encodeURIComponent(currentUrl)}`;
+					const linkedinLink = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`;
+
+					// Log the links for debugging
+					console.log("Facebook Share URL:", facebookLink);
+					console.log("WhatsApp Share URL:", whatsappLink);
+					console.log("Twitter Share URL:", twitterLink);
+					console.log("LinkedIn Share URL:", linkedinLink);
+
+					// Update social media links with constructed URLs
+					document.getElementById("facebookShare").href = facebookLink;
+					document.getElementById("whatsappShare").href = whatsappLink;
+					document.getElementById("twitterShare").href = twitterLink;
+					document.getElementById("linkedinShare").href = linkedinLink;
+
+					// Add event listener to increment share count before redirect
+					document.getElementById("facebookShare").addEventListener('click', (e) => {
+						e.preventDefault(); // Prevent immediate redirect
+						incrementShareCount().then(() => {
+							window.location.href = facebookLink; // Redirect after the share count update
+						});
+					});
+
+					document.getElementById("whatsappShare").addEventListener('click', (e) => {
+						e.preventDefault(); // Prevent immediate redirect
+						incrementShareCount().then(() => {
+							window.location.href = whatsappLink; // Redirect after the share count update
+						});
+					});
+
+					document.getElementById("twitterShare").addEventListener('click', (e) => {
+						e.preventDefault(); // Prevent immediate redirect
+						incrementShareCount().then(() => {
+							window.location.href = twitterLink; // Redirect after the share count update
+						});
+					});
+
+					document.getElementById("linkedinShare").addEventListener('click', (e) => {
+						e.preventDefault(); // Prevent immediate redirect
+						incrementShareCount().then(() => {
+							window.location.href = linkedinLink; // Redirect after the share count update
+						});
+					});
+				} else {
+					console.error("One or more required values are undefined: currentUrl, desktopMessage, blogImage");
+				}
+			}
+		});
+
+		// Close the modal when clicking outside of it or on a social media link
+		document.addEventListener("click", (event) => {
+			if (!shareBtn.contains(event.target) && !shareModal.contains(event.target)) {
+				shareModal.classList.add("hidden");
+			}
+		});
+
+		 // Function to increment the share count
+		function incrementShareCount() {
+			return fetch(`/api/shares/${blogId}`, {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+			})
+				.then((response) => response.json())
+				.then((data) => {
+					shareCountElement.textContent = formatNumber(data.shares); // Update share count display
+				})
+				.catch((error) => console.error('Error incrementing share count:', error));
+		}
+	});
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,1257 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dev Elijah | Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Demystifying Deep Learning: How Neural Networks Learn from Data" />
+	<meta property="og:description" content="Learn how neural networks, the building blocks of deep learning, use data to recognize patterns, make decisions, and improve performance over time. Understand the underlying mechanisms that power applications like image recognition, natural language processing, and more." />
+	<meta property="og:image" content="img/blog/Machine%20Learning/How%20Machine%20Learning%20is%20Revolutionizing%20the%20Healthcare%20Industry.jpeg" />
+	<meta property="og:url" content="https://yourwebsite.com/blog/website-development" />
+	<meta property="og:type" content="article" />
+	
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Saira:300,400,500,600,700&amp;display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:300i,400,400i,600,600i,700&amp;display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="icon" href="img/logo/submark_logo-removebg-preview .png">
+	<!-- /Fonts -->
+	<!-- hericon cdn link -->
+	<link href="https://cdn.jsdelivr.net/npm/heroicons@1.0.6/dist/heroicons.min.css" rel="stylesheet">
+	<!-- font awesome cdn link -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+	<!-- Styles -->
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+	<!-- /Styles -->
+
+	<!-- tailwind css cdn link -->
+	<script src="https://cdn.tailwindcss.com"></script>	
+
+	<style>
+			/* Initial clip-path for the hero_texts element */
+		.hero_texts {
+			clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+		}
+
+		/* Final clip-path when the 'animate' class is added */
+		.hero_texts.animate {
+			clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 50% 100%, 100% 100%, 100% 0%);
+		}
+
+        copy-btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 8px 16px;
+        margin-top: 4px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        .copy-btn:hover {
+            background-color: #45a049;
+        }
+
+        .copy-status {
+            font-size: 0.9rem;
+            color: green;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+	</style>
+	
+</head>
+<body>
+
+	<!-- Preloader -->
+	<div class="perker_loader-wrapper">
+		<div class="loader-container">
+			<img src="img/logo/5-removebg-preview.png" alt="iTech Team Logo" class="loader-logo" />
+			<div class="loader"></div>
+		</div>
+	</div>	
+	<!-- /Preloader -->
+
+	<!-- Wrapper All -->
+	<div class="perker_wrap_all">
+		
+		<!-- Topbar -->
+		<div class="perker_topbar">
+			<div class="mainpart">
+			  <div class="container">
+				<div class="inner">
+				  <div class="logo">
+					<a href="index.html"><img src="img/logo/1-removebg-preview.png" alt="" width="30%" /></a>
+				  </div>
+				  	<div class="menu">
+						<ul>
+							<li><a href="#" onclick="redirectToHome()">Home</a></li>
+							<li class="relative group">
+								<a href="#" class="font-bold">Blog</a>
+								<ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-[#07081f] shadow-lg w-64 py-2 text-white">
+									<li><a href="#" onclick="redirectToPage('introduction-to-web-development.html')" class="block px-4 py-2">Website Development</a></li>
+									<li><a href="#" onclick="redirectToPage('introduction-to-data-engineering.html')" class="block px-4 py-2">Data Engineering</a></li>
+									<li><a href="#" onclick="redirectToPage('introduction-to-data-analytics.html')" class="block px-4 py-2">Data Analytics</a></li>
+									<li><a href="#" onclick="redirectToPage('introduction-to-machine-learning-ai.html')" class="block px-4 py-2">Machine Learning</a></li>
+									<li><a href="#" onclick="redirectToPage('introduction-to-data-science.html')" class="block px-4 py-2">Data Science</a></li>
+									<li><a href="#" onclick="redirectToPage('version-control-git-github.html')" class="block px-4 py-2">Version Control System</a></li>
+								</ul>
+							</li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>										
+				  	</div>
+				  <div class="trigger">
+					<span class="menu"><a href="#">Menu</a></span>
+					<span class="close"><a href="#">Close</a></span>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  
+			<div class="dropdown">
+			  <div class="container">
+				<div class="main">
+					<ul>
+						<li><a href="#" onclick="redirectToHome()">Home</a></li>
+						<li class="relative group">
+							<a href="#" class="font-bold">Blog</a>
+							<ul class="hidden group-hover:flex flex-col absolute z-10 top-full bg-[#07081f] shadow-lg w-64 py-2 text-white">
+								<li><a href="#" onclick="redirectToPage('introduction-to-web-development.html')" class="block px-4 py-2">Website Development</a></li>
+								<li><a href="#" onclick="redirectToPage('introduction-to-data-engineering.html')" class="block px-4 py-2">Data Engineering</a></li>
+								<li><a href="#" onclick="redirectToPage('introduction-to-data-analytics.html')" class="block px-4 py-2">Data Analytics</a></li>
+								<li><a href="#" onclick="redirectToPage('introduction-to-machine-learning-ai.html')" class="block px-4 py-2">Machine Learning</a></li>
+								<li><a href="#" onclick="redirectToPage('introduction-to-data-science.html')" class="block px-4 py-2">Data Science</a></li>
+								<li><a href="#" onclick="redirectToPage('version-control-git-github.html')" class="block px-4 py-2">Version Control System</a></li>
+							</ul>
+						</li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+			  </div>
+			</div>
+		</div>		  
+		<!-- /Topbar -->
+
+		<section class="relative bg-cover bg-center bg-no-repeat h-screen z-[-1]" style="background-image: url('img/blog/Machine\ Learning/Neural network.webp');">
+            <div class="absolute inset-0 bg-[#07081f] bg-opacity-70 flex items-center justify-center">
+                <div 
+                    class="hero_texts relative z-10 text-center px-4 transition-[clip-path] duration-[1500ms] ease-in-out"
+                    id="heroTexts"
+                >
+                    <h1 class="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white">
+                        Demystifying Deep Learning
+                    </h1>
+                    <p class="subtitle text-lg uppercase font-semibold text-gray-300 mt-2">
+                        Learn how neural networks, the building blocks of deep learning, use data to recognize patterns.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <div class="max-w-4xl mx-auto p-8 opacity-0 transform translate-y-20 transition-all duration-700 ease-in-out" id="mlAiSection">
+            <h1 class="text-center text-2xl lg:text-4xl font-bold mb-8">
+                How Neural Networks Learn from Data
+            </h1>
+            
+            <p class="text-lg lg:text-xl mb-6 font-semibold">
+                Deep learning is a powerful subset of machine learning that enables computers to learn from vast amounts of data. It uses neural networks, which are designed to mimic the human brain's processing. In this article, we'll explore how neural networks work, with examples that show their applications and platforms where you can learn more about deep learning.
+            </p>
+            
+            <h2 class="text-2xl lg:text-3xl font-bold mb-4">What Are Neural Networks?</h2>
+            <p class="text-lg lg:text-xl mb-6">
+                Neural networks are a type of algorithm inspired by the human brain. They consist of layers of nodes (neurons) that process data. These networks learn by adjusting the weights of connections between neurons based on the data they see. Over time, neural networks improve their accuracy in making predictions or decisions.
+            </p>
+            
+            <h2 class="text-2xl lg:text-3xl font-bold mb-4">Examples of Deep Learning Applications</h2>
+            
+            <h3 class="text-xl lg:text-2xl font-bold mb-4">1. Image Recognition</h3>
+            <p class="text-lg lg:text-xl mb-6">
+                Neural networks excel at image recognition. By training on large datasets of labeled images, a neural network learns to identify objects in new images. For instance, it can detect faces, animals, or even handwritten digits.
+            </p>
+            <div class="bg-gray-900 text-white p-4 rounded-lg shadow-md overflow-auto mb-6">
+            <pre><code class="language-python">
+# Example: Image recognition using a Convolutional Neural Network (CNN)
+import tensorflow as tf
+from tensorflow.keras import layers, models
+
+model = models.Sequential([
+    layers.Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
+    layers.MaxPooling2D((2, 2)),
+    layers.Flatten(),
+    layers.Dense(64, activation='relu'),
+    layers.Dense(10, activation='softmax')  # 10 classes of images
+])
+
+# Train with image data
+model.fit(train_images, train_labels, epochs=5)
+            </code></pre>
+            </div>
+            <p class="text-lg lg:text-xl mb-6">
+                In this example, a convolutional neural network (CNN) is used to classify images. The model learns to identify features in images and classify them accordingly.
+            </p>
+            
+            <h3 class="text-xl lg:text-2xl font-bold mb-4">2. Speech Recognition</h3>
+            <p class="text-lg lg:text-xl mb-6">
+                Deep learning models are also great at understanding speech. By analyzing audio data, neural networks can recognize spoken words and convert them into text. This technology powers voice assistants like Siri and Alexa.
+            </p>
+            <div class="bg-gray-900 text-white p-4 rounded-lg shadow-md overflow-auto mb-6">
+            <pre><code class="language-python">
+# Example: Speech recognition using a Recurrent Neural Network (RNN)
+import tensorflow as tf
+from tensorflow.keras import layers, models
+
+model = models.Sequential([
+    layers.Embedding(input_dim=10000, output_dim=128),
+    layers.LSTM(128),
+    layers.Dense(1, activation='sigmoid')  # For speech classification
+])
+
+# Train with audio data (converted to text features)
+model.fit(train_audio_features, train_labels, epochs=5)
+            </code></pre>
+            </div>
+            <p class="text-lg lg:text-xl mb-6">
+                Here, a recurrent neural network (RNN) is used to process sequential data like audio. RNNs are perfect for speech recognition because they can handle time-series data.
+            </p>
+            
+            <h3 class="text-xl lg:text-2xl font-bold mb-4">3. Natural Language Processing (NLP)</h3>
+            <p class="text-lg lg:text-xl mb-6">
+                NLP allows computers to understand and generate human language. Deep learning models, such as transformers, are capable of analyzing text data, making chatbots, translation tools, and text summarization possible.
+            </p>
+            <div class="bg-gray-900 text-white p-4 rounded-lg shadow-md overflow-auto mb-6">
+            <pre><code class="language-python">
+# Example: Text generation using a Transformer model
+import tensorflow as tf
+from tensorflow.keras import layers, models
+
+model = models.Sequential([
+    layers.Embedding(input_dim=10000, output_dim=128),
+    layers.LSTM(128),
+    layers.Dense(64, activation='relu'),
+    layers.Dense(1, activation='sigmoid')
+])
+
+# Train with text data (e.g., books or articles)
+model.fit(train_text_data, train_labels, epochs=5)
+            </code></pre>
+            </div>
+            <p class="text-lg lg:text-xl mb-6">
+                In this case, an LSTM model is used for processing and generating human-like text, which is a key application of NLP in deep learning.
+            </p>
+            
+            <h3 class="text-xl lg:text-2xl font-bold mb-4">4. Autonomous Vehicles</h3>
+            <p class="text-lg lg:text-xl mb-6">
+                Deep learning is at the core of self-driving cars. Neural networks process data from cameras, sensors, and radars to make decisions in real-time, such as identifying pedestrians, road signs, and obstacles.
+            </p>
+            <div class="bg-gray-900 text-white p-4 rounded-lg shadow-md overflow-auto mb-6">
+            <pre><code class="language-python">
+# Example: Autonomous vehicle decision making
+import tensorflow as tf
+from tensorflow.keras import layers, models
+
+model = models.Sequential([
+    layers.Dense(128, activation='relu', input_shape=(sensor_data_shape,)),
+    layers.Dense(64, activation='relu'),
+    layers.Dense(1, activation='sigmoid')  # Output: steering direction or speed
+])
+
+# Train with sensor data (e.g., camera images, radar readings)
+model.fit(train_sensor_data, train_labels, epochs=5)
+            </code></pre>
+            </div>
+            <p class="text-lg lg:text-xl mb-6">
+                Here, a deep neural network learns how to process sensor data and make decisions about steering and speed for autonomous vehicles.
+            </p>
+            
+            <h3 class="text-xl lg:text-2xl font-bold mb-4">5. Fraud Detection</h3>
+            <p class="text-lg lg:text-xl mb-6">
+                Financial institutions use deep learning to detect fraudulent activities by analyzing transaction data and identifying patterns that deviate from the norm. Neural networks continuously improve by learning from new data.
+            </p>
+            <div class="bg-gray-900 text-white p-4 rounded-lg shadow-md overflow-auto mb-6">
+            <pre><code class="language-python">
+# Example: Fraud detection using a neural network
+import tensorflow as tf
+from tensorflow.keras import layers, models
+
+model = models.Sequential([
+    layers.Dense(128, activation='relu', input_shape=(transaction_data_shape,)),
+    layers.Dense(64, activation='relu'),
+    layers.Dense(1, activation='sigmoid')  # Output: fraud or not fraud
+])
+
+# Train with transaction data
+model.fit(train_transaction_data, train_labels, epochs=5)
+            </code></pre>
+            </div>
+            <p class="text-lg lg:text-xl mb-6">
+                This example demonstrates a neural network trained on transaction data to predict fraudulent activities, helping banks and businesses prevent financial losses.
+            </p>
+            
+            <h3 class="text-xl lg:text-2xl font-bold mb-4">6. Healthcare Diagnosis</h3>
+            <p class="text-lg lg:text-xl mb-6">
+                Deep learning models are used to analyze medical data, such as X-rays and MRI scans, to diagnose diseases like cancer, pneumonia, and heart disease. These models improve by learning from vast amounts of medical records.
+            </p>
+            <div class="bg-gray-900 text-white p-4 rounded-lg shadow-md overflow-auto mb-6">
+            <pre><code class="language-python">
+# Example: Healthcare diagnosis using deep learning
+import tensorflow as tf
+from tensorflow.keras import layers, models
+
+model = models.Sequential([
+    layers.Conv2D(32, (3, 3), activation='relu', input_shape=(64, 64, 3)),
+    layers.MaxPooling2D((2, 2)),
+    layers.Flatten(),
+    layers.Dense(64, activation='relu'),
+    layers.Dense(1, activation='sigmoid')  # Output: disease prediction
+])
+
+# Train with medical image data (e.g., X-ray images)
+model.fit(train_images, train_labels, epochs=5)
+            </code></pre>
+            </div>
+            <p class="text-lg lg:text-xl mb-6">
+                In this case, a convolutional neural network (CNN) helps diagnose diseases based on medical imaging. Neural networks improve the accuracy of diagnoses over time.
+            </p>
+            
+            <h3 class="text-xl lg:text-2xl font-bold mb-4">7. Customer Service Chatbots</h3>
+            <p class="text-lg lg:text-xl mb-6">
+                Many businesses use deep learning-powered chatbots to interact with customers, providing answers to common questions and resolving issues. These models learn from previous conversations to improve their responses.
+            </p>
+            <div class="bg-gray-900 text-white p-4 rounded-lg shadow-md overflow-auto mb-6">
+            <pre><code class="language-python">
+# Example: Customer service chatbot using NLP
+import tensorflow as tf
+from tensorflow.keras import layers, models
+
+model = models.Sequential([
+    layers.Embedding(input_dim=10000, output_dim=128),
+    layers.LSTM(128),
+    layers.Dense(64, activation='relu'),
+    layers.Dense(1, activation='sigmoid')  # Response prediction
+])
+
+# Train with customer service data
+model.fit(train_customer_data, train_labels, epochs=5)
+            </code></pre>
+            </div>
+            <p class="text-lg lg:text-xl mb-6">
+                In this example, a deep learning model is used to generate responses for a customer service chatbot, improving user experience and operational efficiency.
+            </p>
+            
+            <h2 class="text-2xl lg:text-3xl font-bold mb-4">Platforms to Learn Deep Learning</h2>
+            <p class="text-lg lg:text-xl mb-6">
+                To dive deeper into deep learning, check out these platforms:
+            </p>
+            <ul class="list-disc pl-8 text-lg lg:text-xl mb-6">
+                <li><a href="https://www.coursera.org/learn/neural-networks-deep-learning" class="text-blue-500 underline">Coursera: Deep Learning Specialization by Andrew Ng</a></li>
+                <li><a href="https://www.fast.ai/" class="text-blue-500 underline">Fast.ai: Practical Deep Learning for Coders</a></li>
+                <li><a href="https://www.udacity.com/course/intro-to-deep-learning-nanodegree--nd101" class="text-blue-500 underline">Udacity: Intro to Deep Learning Nanodegree</a></li>
+                <li><a href="https://www.edx.org/professional-certificate/harvardx-deep-learning" class="text-blue-500 underline">edX: Deep Learning Professional Certificate</a></li>
+            </ul>
+            
+            <p class="text-lg lg:text-xl mb-6">
+                These platforms provide courses that will help you get hands-on experience with deep learning and its applications. Start learning today to unlock the potential of neural networks!
+            </p>            
+
+			<div class="flex justify-center items-center mt-8">
+				<!-- view butoon -->
+				<div class="flex items-center mr-6">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-8 h-8 text-gray-400">
+					  <path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/>
+					</svg>
+					<span id="viewCount" class="ml-2 text-gray-400">0</span>
+				</div>
+
+				<!-- Like Button -->
+				<button id="likeBtn" class="flex items-center mr-6">
+					<svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-8 h-8 hover:scale-110 transition duration-300">
+					  <!-- Empty heart path -->
+					  <path id="heartPath"
+						fill="none" 
+						stroke="currentColor" 
+						stroke-width="20" 
+						class="text-gray-400 border-8"
+						d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z">
+					  </path>
+					</svg>
+					<span id="likeCount" class="ml-2 text-gray-400">0</span>
+				</button>	
+		
+				<!-- Share Button -->
+				<div class="relative">
+					<button id="mainShareBtn" class="flex items-center">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-8 h-8 text-gray-400 transition duration-300">
+						<path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z" />
+					</svg>
+					<span id="mainShareCount" class="ml-2 text-gray-400">0</span>
+					</button>
+				
+					<!-- Share Modal (Tailwind classes for visibility control) -->
+					<div id="mainShareModal" class="absolute hidden mt-2 justify-center items-center transform -translate-x-1/2 sm:left-auto sm:right-0 sm:mt-0 sm:translate-x-0 bg-[#07081f] p-4 rounded-lg shadow-lg w-80">
+						<h3 class="text-lg text-white font-semibold mb-4">Share this Blog</h3>
+						<div class="flex justify-around">
+						  <a href="https://www.facebook.com/sharer/sharer.php?u=" id="facebookShare" class="text-blue-600 hover:text-blue-800">
+							<i class="fab fa-facebook-f w-6 h-6"></i>
+						  </a>
+						  <a href="https://wa.me/?text=" id="whatsappShare" class="text-green-500 hover:text-green-700">
+							<i class="fab fa-whatsapp w-6 h-6"></i>
+						  </a>
+						  <a href="https://twitter.com/intent/tweet?text=" id="twitterShare" class="text-blue-400 hover:text-blue-600">
+							<i class="fab fa-twitter w-6 h-6"></i>
+						  </a>
+						  <a href="https://www.linkedin.com/sharing/share-offsite/?url=" id="linkedinShare" class="text-blue-700 hover:text-blue-900">
+							<i class="fab fa-linkedin-in w-6 h-6"></i>
+						  </a>
+						</div>
+					</div>					  
+				</div>  
+  
+			</div>
+        
+            <div class="flex justify-center mt-8">
+                <a href="introduction-to-data-analytics.html">
+                    <button class="bg-[#ea3509] text-white px-4 sm:px-6 py-2 text-base sm:text-xl h-10 w-24 lg:h-12 lg:w-64 font-bold rounded-xl shadow-md hover:bg-[#050f5a] transition duration-300">
+                        Back
+                    </button>
+                </a>
+            </div>
+        </div>
+
+
+        <div class="perker_section" id="news">
+            <div class="perker_news">
+                <div class="container">
+                    <div class="perker_title_holder">
+                        <h3>Latest Blog</h3>
+                    </div>
+                    <div class="news_list perker_appear">
+                        <ul>
+                            <li class="blog-card" data-blog-id="blog19">
+								<div class="inner">
+									<div class="image">
+										<img src="img/blog/Marchine Learning.png" alt="Introduction to Machine Learning and Artificial Intelligence" />
+										<div class="main" data-img-url="img/blog/machine-learning-ai.jpg"></div>
+										<a class="link" href="introduction-to-machine-learning-ai.html" class="read-more-btn"></a>
+									</div>
+									<div class="texts">
+										<div class="date">
+											<span>Dec 09, 2024 in <a href="#">Artificial Intelligence</a></span>
+										</div>
+										<div class="title">
+											<h3><a href="introduction-to-machine-learning-ai.html" class="read-more-btn">Introduction to Machine Learning and AI Development</a></h3>
+										</div>
+										<div class="date mt-[-10px]">
+											<span>Author: <a href="index.html">Dev. Elijah</a></span>
+										</div>
+										<div class="flex justify-center items-center mt-4 mb-6 mr-2 lg:mr-12 space-x-6 sm:space-x-3">
+										<!-- View Button -->
+										<div class="flex items-center sm:mr-3">
+										  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-6 h-6 text-gray-400">
+											<path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/>
+										  </svg>
+										  <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+											<span id="viewCount-blog19" class="text-ellipsis">0</span>
+										  </div>
+										</div>
+									  
+										<!-- Like Button -->
+										<button id="likeBtn-blog19" class="flex items-center sm:mr-3">
+										  <svg id="heartIcon-blog19" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 hover:scale-110 transition duration-300">
+											<path id="heartPath"
+											fill="none" 
+											stroke="currentColor" 
+											stroke-width="20" 
+											class="text-gray-400 border-8"
+											d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z">
+											</path>
+										  </svg>
+										  <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+											<span id="likeCount-blog19" class="text-ellipsis">0</span>
+										  </div>
+										</button>
+									  
+										<!-- Share Button -->
+										<div class="relative">
+										  <button id="shareBtn-blog19" class="flex items-center sm:mr-3">
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6 text-gray-400 transition duration-300">
+											  <path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z" />
+											</svg>
+											<div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+											  <span id="shareCount-blog19" class="text-ellipsis">0</span>
+											</div>
+										  </button>
+									  
+										  <!-- Share Modal (Tailwind classes for visibility control) -->
+										  <div id="shareModal-blog19" class="absolute hidden mt-2 justify-center items-center transform -translate-x-1/2 sm:left-auto sm:right-0 sm:mt-0 sm:translate-x-0 bg-[#07081f] p-4 rounded-lg shadow-lg sm:w-72 w-80">
+											<h3 class="text-lg text-white font-semibold mb-4">Share this Blog</h3>
+											<div class="flex justify-around">
+											  <a href="https://www.facebook.com/sharer/sharer.php?u=" id="facebookShare" class="text-blue-600 hover:text-blue-800">
+												<i class="fab fa-facebook-f w-6 h-6"></i>
+											  </a>
+											  <a href="https://wa.me/?text=" id="whatsappShare" class="text-green-500 hover:text-green-700">
+												<i class="fab fa-whatsapp w-6 h-6"></i>
+											  </a>
+											  <a href="https://twitter.com/intent/tweet?text=" id="twitterShare" class="text-blue-400 hover:text-blue-600">
+												<i class="fab fa-twitter w-6 h-6"></i>
+											  </a>
+											  <a href="https://www.linkedin.com/sharing/share-offsite/?url=" id="linkedinShare" class="text-blue-700 hover:text-blue-900">
+												<i class="fab fa-linkedin-in w-6 h-6"></i>
+											  </a>
+											</div>
+										  </div>  
+										</div>  
+									</div>
+										<div class="def">
+											<p>Discover how Machine Learning and Artificial Intelligence are revolutionizing industries by enabling systems to learn, adapt, and perform tasks intelligently.</p>
+										</div>
+										<div class="perker_button">
+											<a href="introduction-to-machine-learning-ai.html" class="read-more-btn">Read More</a>
+										</div>
+									</div>
+								</div>
+							</li>
+                            <li class="blog-card" data-blog-id="blog20">
+                                <div class="inner">
+                                    <div class="image">
+                                        <img src="img/blog/Machine Learning/Tensorflow.jpg" alt="Practical Applications of TensorFlow for Real-World Machine Learning" class="w-full h-auto" />
+                                        <div class="main" data-img-url="img/blog/Machine Learning/Tensorflow.jpg"></div>
+                                        <a class="link" href="tensorflow-applications.html" class="read-more-btn" aria-label="Practical Applications of TensorFlow for Real-World Machine Learning"></a>
+                                    </div>
+                                    <div class="texts">
+                                        <div class="date">
+                                            <span>Dec 09, 2024 in <a href="#">Machine Learning</a></span>
+                                        </div>
+                                        <div class="title">
+                                            <h3><a href="tensorflow-applications.html" class="read-more-btn">Practical Applications of TensorFlow for Real-World Machine Learning</a></h3>
+                                        </div>
+                                        <div class="date mt-[-10px]">
+                                            <span>Author: <a href="index.html">Dev. Elijah</a></span>
+                                        </div>
+                                        <div class="flex justify-center items-center mt-4 mb-6 mr-2 lg:mr-12 space-x-6 sm:space-x-3">
+                                            <!-- View Button -->
+                                            <div class="flex items-center sm:mr-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-6 h-6 text-gray-400">
+                                                    <path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/>
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                    <span id="viewCount-blog20" class="text-ellipsis">0</span>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Like Button -->
+                                            <button id="likeBtn-blog20" class="flex items-center sm:mr-3">
+                                                <svg id="heartIcon-blog20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 hover:scale-110 transition duration-300">
+                                                    <path id="heartPath"
+                                                    fill="none" 
+                                                    stroke="currentColor" 
+                                                    stroke-width="20" 
+                                                    class="text-gray-400 border-8"
+                                                    d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z">
+                                                    </path>
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                    <span id="likeCount-blog20" class="text-ellipsis">0</span>
+                                                </div>
+                                            </button>
+                                    
+                                            <!-- Share Button -->
+                                            <div class="relative">
+                                                <button id="shareBtn-blog20" class="flex items-center sm:mr-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6 text-gray-400 transition duration-300">
+                                                        <path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z" />
+                                                    </svg>
+                                                    <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                        <span id="shareCount-blog20" class="text-ellipsis">0</span>
+                                                    </div>
+                                                </button>
+                                    
+                                                <!-- Share Modal (Tailwind classes for visibility control) -->
+                                                <div id="shareModal-blog20" class="absolute hidden mt-2 justify-center items-center transform -translate-x-1/2 sm:left-auto sm:right-0 sm:mt-0 sm:translate-x-0 bg-[#07081f] p-4 rounded-lg shadow-lg sm:w-72 w-80">
+                                                    <h3 class="text-lg text-white font-semibold mb-4">Share this Blog</h3>
+                                                    <div class="flex justify-around">
+                                                        <a href="https://www.facebook.com/sharer/sharer.php?u=" id="facebookShare" class="text-blue-600 hover:text-blue-800">
+                                                            <i class="fab fa-facebook-f w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://wa.me/?text=" id="whatsappShare" class="text-green-500 hover:text-green-700">
+                                                            <i class="fab fa-whatsapp w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://twitter.com/intent/tweet?text=" id="twitterShare" class="text-blue-400 hover:text-blue-600">
+                                                            <i class="fab fa-twitter w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=" id="linkedinShare" class="text-blue-700 hover:text-blue-900">
+                                                            <i class="fab fa-linkedin-in w-6 h-6"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                        <div class="def">
+                                            <p>Discover how TensorFlow is used in real-world machine learning applications, from image recognition to time-series forecasting and natural language processing.</p>
+                                        </div>
+                                        <div class="perker_button">
+                                            <a href="tensorflow-applications.html" class="read-more-btn" class="text-blue-500 hover:underline">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="blog-card" data-blog-id="blog21">
+                                <div class="inner">
+                                    <div class="image">
+                                        <img src="img/blog/Machine Learning/How Machine Learning is Revolutionizing the Healthcare Industry.jpeg" alt="How Machine Learning is Revolutionizing the Healthcare Industry" class="w-full h-auto" />
+                                        <div class="main" data-img-url="img/blog/Machine Learning/How Machine Learning is Revolutionizing the Healthcare Industry.jpeg"></div>
+                                        <a class="link" href="how-machine-learning-is-revolutionizing-healthcare.html" class="read-more-btn" aria-label="How Machine Learning is Revolutionizing the Healthcare Industry"></a>
+                                    </div>
+                                    <div class="texts">
+                                        <div class="date">
+                                            <span>Dec 09, 2024 in <a href="#">Healthcare</a></span>
+                                        </div>
+                                        <div class="title">
+                                            <h3><a href="how-machine-learning-is-revolutionizing-healthcare.html" class="read-more-btn">How Machine Learning is Revolutionizing the Healthcare Industry</a></h3>
+                                        </div>
+                                        <div class="date mt-[-10px]">
+                                            <span>Author: <a href="index.html">Dev. Elijah</a></span>
+                                        </div>
+                                        <div class="flex justify-center items-center mt-4 mb-6 mr-2 lg:mr-12 space-x-6 sm:space-x-3">
+                                            <!-- View Button -->
+                                            <div class="flex items-center sm:mr-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-6 h-6 text-gray-400">
+                                                    <path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/>
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                    <span id="viewCount-blog21" class="text-ellipsis">0</span>
+                                                </div>
+                                            </div>
+                            
+                                            <!-- Like Button -->
+                                            <button id="likeBtn-blog21" class="flex items-center sm:mr-3">
+                                                <svg id="heartIcon-blog21" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 hover:scale-110 transition duration-300">
+                                                    <path id="heartPath"
+                                                    fill="none" 
+                                                    stroke="currentColor" 
+                                                    stroke-width="20" 
+                                                    class="text-gray-400 border-8"
+                                                    d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z">
+                                                    </path>
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                    <span id="likeCount-blog21" class="text-ellipsis">0</span>
+                                                </div>
+                                            </button>
+                            
+                                            <!-- Share Button -->
+                                            <div class="relative">
+                                                <button id="shareBtn-blog21" class="flex items-center sm:mr-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6 text-gray-400 transition duration-300">
+                                                        <path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z" />
+                                                    </svg>
+                                                    <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                        <span id="shareCount-blog21" class="text-ellipsis">0</span>
+                                                    </div>
+                                                </button>
+                            
+                                                <!-- Share Modal (Tailwind classes for visibility control) -->
+                                                <div id="shareModal-blog21" class="absolute hidden mt-2 justify-center items-center transform -translate-x-1/2 sm:left-auto sm:right-0 sm:mt-0 sm:translate-x-0 bg-[#07081f] p-4 rounded-lg shadow-lg sm:w-72 w-80">
+                                                    <h3 class="text-lg text-white font-semibold mb-4">Share this Blog</h3>
+                                                    <div class="flex justify-around">
+                                                        <a href="https://www.facebook.com/sharer/sharer.php?u=" id="facebookShare" class="text-blue-600 hover:text-blue-800">
+                                                            <i class="fab fa-facebook-f w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://wa.me/?text=" id="whatsappShare" class="text-green-500 hover:text-green-700">
+                                                            <i class="fab fa-whatsapp w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://twitter.com/intent/tweet?text=" id="twitterShare" class="text-blue-400 hover:text-blue-600">
+                                                            <i class="fab fa-twitter w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=" id="linkedinShare" class="text-blue-700 hover:text-blue-900">
+                                                            <i class="fab fa-linkedin-in w-6 h-6"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                        <div class="def">
+                                            <p>Explore how machine learning is transforming the healthcare industry by enabling better diagnostics, personalized treatments, and more efficient healthcare delivery.</p>
+                                        </div>
+                                        <div class="perker_button">
+                                            <a href="how-machine-learning-is-revolutionizing-healthcare.html" class="read-more-btn" class="text-blue-500 hover:underline">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="blog-card" data-blog-id="blog23">
+                                <div class="inner">
+                                    <div class="image">
+                                        <img src="img/blog/Machine Learning/NLP.png" alt="Exploring NLP: Using Python to Analyze and Process Text Data" class="w-full h-auto" />
+                                        <div class="main" data-img-url="img/blog/Machine Learning/NLP.png"></div>
+                                        <a class="link" href="exploring-nlp-python-text-analysis.html" class="read-more-btn" aria-label="Exploring NLP: Using Python to Analyze and Process Text Data"></a>
+                                    </div>
+                                    <div class="texts">
+                                        <div class="date">
+                                            <span>Dec 09, 2024 in <a href="#">Natural Language Processing</a></span>
+                                        </div>
+                                        <div class="title">
+                                            <h3><a href="exploring-nlp-python-text-analysis.html" class="read-more-btn">Exploring NLP: Using Python to Analyze and Process Text Data</a></h3>
+                                        </div>
+                                        <div class="date mt-[-10px]">
+                                            <span>Author: <a href="index.html">Dev. Elijah</a></span>
+                                        </div>
+                                        <div class="flex justify-center items-center mt-4 mb-6 mr-2 lg:mr-12 space-x-6 sm:space-x-3">
+                                            <!-- View Button -->
+                                            <div class="flex items-center sm:mr-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-6 h-6 text-gray-400">
+                                                    <path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/>
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                    <span id="viewCount-blog23" class="text-ellipsis">0</span>
+                                                </div>
+                                            </div>
+                            
+                                            <!-- Like Button -->
+                                            <button id="likeBtn-blog23" class="flex items-center sm:mr-3">
+                                                <svg id="heartIcon-blog23" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 hover:scale-110 transition duration-300">
+                                                    <path id="heartPath"
+                                                    fill="none" 
+                                                    stroke="currentColor" 
+                                                    stroke-width="20" 
+                                                    class="text-gray-400 border-8"
+                                                    d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z">
+                                                    </path>
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                    <span id="likeCount-blog23" class="text-ellipsis">0</span>
+                                                </div>
+                                            </button>
+                            
+                                            <!-- Share Button -->
+                                            <div class="relative">
+                                                <button id="shareBtn-blog23" class="flex items-center sm:mr-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6 text-gray-400 transition duration-300">
+                                                        <path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z" />
+                                                    </svg>
+                                                    <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                        <span id="shareCount-blog23" class="text-ellipsis">0</span>
+                                                    </div>
+                                                </button>
+                            
+                                                <!-- Share Modal (Tailwind classes for visibility control) -->
+                                                <div id="shareModal-blog23" class="absolute hidden mt-2 justify-center items-center transform -translate-x-1/2 sm:left-auto sm:right-0 sm:mt-0 sm:translate-x-0 bg-[#07081f] p-4 rounded-lg shadow-lg sm:w-72 w-80">
+                                                    <h3 class="text-lg text-white font-semibold mb-4">Share this Blog</h3>
+                                                    <div class="flex justify-around">
+                                                        <a href="https://www.facebook.com/sharer/sharer.php?u=" id="facebookShare" class="text-blue-600 hover:text-blue-800">
+                                                            <i class="fab fa-facebook-f w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://wa.me/?text=" id="whatsappShare" class="text-green-500 hover:text-green-700">
+                                                            <i class="fab fa-whatsapp w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://twitter.com/intent/tweet?text=" id="twitterShare" class="text-blue-400 hover:text-blue-600">
+                                                            <i class="fab fa-twitter w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=" id="linkedinShare" class="text-blue-700 hover:text-blue-900">
+                                                            <i class="fab fa-linkedin-in w-6 h-6"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                        <div class="def">
+                                            <p>Learn how to use Python for text processing, sentiment analysis, and other NLP techniques to extract valuable insights from textual data.</p>
+                                        </div>
+                                        <div class="perker_button">
+                                            <a href="exploring-nlp-python-text-analysis.html" class="read-more-btn" class="text-blue-500 hover:underline">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>                
+                            <li class="blog-card" data-blog-id="blog24">
+                                <div class="inner">
+                                    <div class="image">
+                                        <img src="img/blog/Machine Learning/Building an AI-Powered Personal Assistant with Python.png" alt="Building an AI-Powered Personal Assistant with Python" class="w-full h-auto" />
+                                        <div class="main" data-img-url="img/blog/Machine Learning/Building an AI-Powered Personal Assistant with Python.png"></div>
+                                        <a class="link" href="building-ai-personal-assistant.html" class="read-more-btn" aria-label="Building an AI-Powered Personal Assistant with Python"></a>
+                                    </div>
+                                    <div class="texts">
+                                        <div class="date">
+                                            <span>Dec 09, 2024 in <a href="#">AI & Machine Learning</a></span>
+                                        </div>
+                                        <div class="title">
+                                            <h3><a href="building-ai-personal-assistant.html" class="read-more-btn">Building an AI-Powered Personal Assistant with Python</a></h3>
+                                        </div>
+                                        <div class="date mt-[-10px]">
+                                            <span>Author: <a href="index.html">Dev. Elijah</a></span>
+                                        </div>
+                                        <div class="flex justify-center items-center mt-4 mb-6 mr-2 lg:mr-12 space-x-6 sm:space-x-3">
+                                            <!-- View Button -->
+                                            <div class="flex items-center sm:mr-3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-6 h-6 text-gray-400">
+                                                    <path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/>
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                    <span id="viewCount-blog24" class="text-ellipsis">0</span>
+                                                </div>
+                                            </div>
+                            
+                                            <!-- Like Button -->
+                                            <button id="likeBtn-blog24" class="flex items-center sm:mr-3">
+                                                <svg id="heartIcon-blog24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-6 h-6 hover:scale-110 transition duration-300">
+                                                    <path id="heartPath"
+                                                    fill="none" 
+                                                    stroke="currentColor" 
+                                                    stroke-width="20" 
+                                                    class="text-gray-400 border-8"
+                                                    d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z">
+                                                    </path>
+                                                </svg>
+                                                <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                    <span id="likeCount-blog24" class="text-ellipsis">0</span>
+                                                </div>
+                                            </button>
+                            
+                                            <!-- Share Button -->
+                                            <div class="relative">
+                                                <button id="shareBtn-blog24" class="flex items-center sm:mr-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-6 h-6 text-gray-400 transition duration-300">
+                                                        <path d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z" />
+                                                    </svg>
+                                                    <div class="ml-2 flex items-center text-gray-400 sm:w-12 overflow-hidden">
+                                                        <span id="shareCount-blog24" class="text-ellipsis">0</span>
+                                                    </div>
+                                                </button>
+                            
+                                                <!-- Share Modal (Tailwind classes for visibility control) -->
+                                                <div id="shareModal-blog24" class="absolute hidden mt-2 justify-center items-center transform -translate-x-1/2 sm:left-auto sm:right-0 sm:mt-0 sm:translate-x-0 bg-[#07081f] p-4 rounded-lg shadow-lg sm:w-72 w-80">
+                                                    <h3 class="text-lg text-white font-semibold mb-4">Share this Blog</h3>
+                                                    <div class="flex justify-around">
+                                                        <a href="https://www.facebook.com/sharer/sharer.php?u=" id="facebookShare" class="text-blue-600 hover:text-blue-800">
+                                                            <i class="fab fa-facebook-f w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://wa.me/?text=" id="whatsappShare" class="text-green-500 hover:text-green-700">
+                                                            <i class="fab fa-whatsapp w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://twitter.com/intent/tweet?text=" id="twitterShare" class="text-blue-400 hover:text-blue-600">
+                                                            <i class="fab fa-twitter w-6 h-6"></i>
+                                                        </a>
+                                                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=" id="linkedinShare" class="text-blue-700 hover:text-blue-900">
+                                                            <i class="fab fa-linkedin-in w-6 h-6"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                        <div class="def">
+                                            <p>Learn how to build an AI-powered personal assistant using Python, covering natural language processing, automation, and integration with APIs to enhance productivity and ease of use.</p>
+                                        </div>
+                                        <div class="perker_button">
+                                            <a href="building-ai-personal-assistant.html" class="read-more-btn" class="text-blue-500 hover:underline">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>                
+                        </ul>
+                    </div>                    
+                </div>
+            </div>
+        </div>	
+
+        <!-- Contact -->
+        <div class="perker_section" id="contact">
+            <div class="perker_contact">
+                <div class="container">
+                    <div class="perker_title_holder">
+                        <span class="title">Contact</span>
+                        <h3>Get In Touch</h3>
+                    </div>
+                    <div class="contact_inner">
+                        <div class="left">
+                            <ul>
+                                <li>
+                                    <div class="inner">
+                                        <img class="svg" src="img/svg/placeholder.svg" alt="" />
+                                        <span>Ogbomoso, Oyo State, Nigeria</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <img class="svg" src="img/svg/telephone.svg" alt="" />
+                                        <span>+234 (0) 701 608 5426</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <img class="svg" src="img/svg/envelope.svg" alt="" />
+                                        <span><a href="mailto:develijah3@gmail.com">develijah3@gmail.com</a></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <img class="svg" src="img/svg/telegram.svg" alt="" />
+                                        <span><a href="https://t.me/dev_elijah">Developer Elijah</a></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="inner">
+                                        <img class="svg" src="img/svg/whatsapp.svg" alt="" />
+                                        <span><a href="https://wa.me/+2347016085426">Dev. Elijah</a></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <form action="https://formspree.io/xzbnbezl" method="POST" class="right">
+                            <div class="first_row">
+                                <ul class="input-box">
+                                    <li>
+                                        <input type="text" name="fullName" placeholder="Full Name" required />
+                                    </li>
+                                    <li>
+                                        <input type="email" name="emailAddress" placeholder="Email" required />
+                                    </li>
+                                    <li>
+                                        <input type="tel" name="mobileNumber" placeholder="Mobile Number with country code e.g +234" required />
+                                    </li>
+                                    <li>
+                                        <input type="text" name="emailSubject" placeholder="Email Subject" required />
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="second_row">
+                                <textarea name="message" id="" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="perker_button">
+                                <a href="#">
+                                    <button type="submit" value="Send Message" class="btn">Submit</button>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Contact -->
+
+        <!-- Footer -->
+        <div class="perker_section">
+            <div class="perker_footer">
+                <div class="container">
+                    <div class="footer_inner">
+                        <div class="left text-center">
+                            <p><a href="index.html" target="_blank" class="text-center">Copyright &copy; 2024 by Dev. Elijah | All Rights Reserved.</a></p>
+                        </div>
+                        <div class="right">
+                            <ul>
+                                <li><a href="https://www.facebook.com/elijah.ayanlere.7"><i class="xcon-facebook"></i></a></li>
+                                <li><a href="https://x.com/Elijah_Ayanlere"><i class="xcon-twitter"></i></a></li>
+                                <!-- <li><a href="#"><i class="xcon-linkedin"></i></a></li> -->
+                                <li><a href="https://www.instagram.com/dev_elijah?igsh=aHhzZXgyc2FvY3Q4"><i class="xcon-instagram"></i></a></li>
+                                <li><a href="https://github.com/Elijah-Ayanlere"><i class="fab fa-github"></i></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Footer -->
+
+        </div>
+        <!-- /Wrapper All -->	
+
+        <!-- Scripts -->
+        <script src="js/jquery.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/init.js"></script>
+        <script src="js/scripts.js"></script>
+        <!-- /Scripts -->
+
+        <script>
+        // Redirect to home page
+        function redirectToHome() {
+        window.location.href = "index.html"; // Replace 'home.html' with your actual home page path
+        }
+
+        // Redirect to a specific blog page
+        function redirectToPage(page) {
+        window.location.href = page;
+        }
+
+        window.addEventListener('load', function () {
+        // Hide the loader and show content after loading is complete
+        const loader = document.querySelector('.perker_loader-wrapper');
+        const heroText = document.querySelector('.hero_texts');
+
+        // Add a delay before hiding the loader
+        setTimeout(() => {
+            document.querySelector('.perker_loader-wrapper').classList.add('hide-loader');
+        }, 3000); // Adjust the timeout to match the loader animation duration (in milliseconds)
+
+        // Trigger the animation for the text after loader is hidden
+        setTimeout(function() {
+            heroText.classList.add('animate');
+        }, 3500); // Slight delay for smooth transition after the loader disappears
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+        const targetSection = document.getElementById("mlAiSection");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        targetSection.classList.add("opacity-100", "translate-y-0");
+                    }
+                });
+            },
+            {
+                threshold: 0.1, // Trigger when 20% of the section is visible
+            }
+        );
+
+        observer.observe(targetSection);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+        const blogId = 'blog22'; // Replace this with the actual blog ID dynamically
+        const viewCountElement = document.getElementById('viewCount');
+        const likeBtn = document.getElementById('likeBtn');
+        const likeCountElement = document.getElementById('likeCount');
+        const heartIcon = document.getElementById('heartIcon').querySelector('path');
+
+        // Helper function to format numbers
+        function formatNumber(value) {
+            if (value >= 1e12) {
+                return (value / 1e12).toFixed(1).replace(/\.0$/, '') + 'T';
+            } else if (value >= 1e9) {
+                return (value / 1e9).toFixed(1).replace(/\.0$/, '') + 'B';
+            } else if (value >= 1e6) {
+                return (value / 1e6).toFixed(1).replace(/\.0$/, '') + 'M';
+            } else if (value >= 1e3) {
+                return (value / 1e3).toFixed(1).replace(/\.0$/, '') + 'k';
+            }
+            return value.toString();
+        }
+
+        // Fetch the current view count for the specific blog
+        fetch(`/api/views/${blogId}`)
+            .then((response) => response.json())
+            .then((data) => {
+                viewCountElement.textContent = formatNumber(data.views);
+            })
+            .catch((error) => console.error('Error fetching views:', error));
+
+        // Increment the view count for the specific blog
+        fetch(`/api/views/${blogId}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                viewCountElement.textContent = formatNumber(data.views); // Update the view count
+            })
+            .catch((error) => console.error('Error incrementing views:', error));
+
+        // Check if the user has already liked the blog
+        const hasLiked = localStorage.getItem(`hasLiked-${blogId}`) === 'true';
+
+        // Update the heart icon based on the user's like state
+        if (hasLiked) {
+            heartIcon.setAttribute('fill', '#ea3509'); // Fill the heart if liked
+        }
+
+        // Fetch the current like count for the specific blog
+        fetch(`/api/likes/${blogId}`)
+            .then((response) => response.json())
+            .then((data) => {
+                likeCountElement.textContent = formatNumber(data.likes);
+            })
+            .catch((error) => console.error('Error fetching likes:', error));
+
+        // Handle like button click
+        likeBtn.addEventListener('click', () => {
+            const currentlyLiked = localStorage.getItem(`hasLiked-${blogId}`) === 'true';
+
+            if (currentlyLiked) {
+                // User is unliking
+                fetch(`/api/unlike/${blogId}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        likeCountElement.textContent = formatNumber(data.likes); // Update like count
+                        heartIcon.setAttribute('fill', 'none'); // Unfill the heart
+                        localStorage.setItem(`hasLiked-${blogId}`, 'false'); // Update user state
+                    })
+                    .catch((error) => console.error('Error unliking:', error));
+            } else {
+                // User is liking
+                fetch(`/api/likes/${blogId}`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        likeCountElement.textContent = formatNumber(data.likes); // Update like count
+                        heartIcon.setAttribute('fill', '#ea3509'); // Fill the heart
+                        localStorage.setItem(`hasLiked-${blogId}`, 'true'); // Update user state
+                    })
+                    .catch((error) => console.error('Error liking:', error));
+            }
+        });
+        });
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+        const blogId = 'blog22'; // Replace with dynamic blog ID
+        const shareBtn = document.getElementById("mainShareBtn");
+        const shareModal = document.getElementById("mainShareModal");
+        const shareCountElement = document.getElementById("mainShareCount"); // Add an element to display share count
+
+        // Get the current page URL
+        const currentUrl = window.location.href;
+        console.log("Current URL:", currentUrl); // Debugging line
+
+        // Get Open Graph meta tags for sharing
+        const blogTitle = document.querySelector('meta[property="og:title"]').getAttribute("content");
+        const blogDescription = document.querySelector('meta[property="og:description"]').getAttribute("content");
+        const blogImage = document.querySelector('meta[property="og:image"]').getAttribute("content");
+
+        // Debugging logs to check if the values are correct
+        console.log("Blog Title:", blogTitle);
+        console.log("Blog Description:", blogDescription);
+        console.log("Blog Image:", blogImage);
+
+        // Detect if it's a mobile device
+        const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+        // Custom message for desktop sharing
+        const desktopMessage = `Check out this amazing blog: "${blogTitle}" I found on Dev. Elijah's portfolio! ${blogDescription}`;
+        console.log("Desktop Message:", desktopMessage); // Debugging line
+
+        // Helper function to format numbers
+        function formatNumber(value) {
+            if (value >= 1e12) {
+                return (value / 1e12).toFixed(1).replace(/\.0$/, '') + 'T';
+            } else if (value >= 1e9) {
+                return (value / 1e9).toFixed(1).replace(/\.0$/, '') + 'B';
+            } else if (value >= 1e6) {
+                return (value / 1e6).toFixed(1).replace(/\.0$/, '') + 'M';
+            } else if (value >= 1e3) {
+                return (value / 1e3).toFixed(1).replace(/\.0$/, '') + 'k';
+            }
+            return value.toString();
+        }
+
+        // Fetch and display the current share count for the specific blog
+        fetch(`/api/shares/${blogId}`)
+        .then((response) => response.json())
+        .then((data) => {
+            shareCountElement.textContent = formatNumber(data.shares);
+        })
+        .catch((error) => console.error('Error fetching share count:', error));
+
+        // Click event for the share button
+        shareBtn.addEventListener("click", () => {
+            if (isMobile) {
+                // Use the navigator.share API for mobile devices
+                if (navigator.share) {
+                    navigator.share({
+                        title: blogTitle,
+                        text: desktopMessage,
+                        url: currentUrl
+                    })
+                        .then(() => {
+                            console.log("Shared successfully");
+                            // Increment the share count after sharing
+                            incrementShareCount();
+                        })
+                        .catch((error) => console.error("Error sharing", error));
+                } else {
+                    alert("Sharing is not supported on this browser.");
+                }
+            } else {
+                // For desktop, show the modal with social media share links
+                shareModal.classList.remove("hidden");
+
+                // Check if the variables have the expected values before constructing links
+                if (currentUrl && desktopMessage && blogImage) {
+                    // Construct URLs for social media share
+                    const facebookLink = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}&quote=${encodeURIComponent(desktopMessage)}&picture=${encodeURIComponent(blogImage)}`;
+                    const whatsappLink = `https://wa.me/?text=${encodeURIComponent(desktopMessage)}%20${encodeURIComponent(currentUrl)}`;
+                    const twitterLink = `https://twitter.com/intent/tweet?text=${encodeURIComponent(desktopMessage)}&url=${encodeURIComponent(currentUrl)}`;
+                    const linkedinLink = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`;
+
+                    // Log the links for debugging
+                    console.log("Facebook Share URL:", facebookLink);
+                    console.log("WhatsApp Share URL:", whatsappLink);
+                    console.log("Twitter Share URL:", twitterLink);
+                    console.log("LinkedIn Share URL:", linkedinLink);
+
+                    // Update social media links with constructed URLs
+                    document.getElementById("facebookShare").href = facebookLink;
+                    document.getElementById("whatsappShare").href = whatsappLink;
+                    document.getElementById("twitterShare").href = twitterLink;
+                    document.getElementById("linkedinShare").href = linkedinLink;
+
+                    // Add event listener to increment share count before redirect
+                    document.getElementById("facebookShare").addEventListener('click', (e) => {
+                        e.preventDefault(); // Prevent immediate redirect
+                        incrementShareCount().then(() => {
+                            window.location.href = facebookLink; // Redirect after the share count update
+                        });
+                    });
+
+                    document.getElementById("whatsappShare").addEventListener('click', (e) => {
+                        e.preventDefault(); // Prevent immediate redirect
+                        incrementShareCount().then(() => {
+                            window.location.href = whatsappLink; // Redirect after the share count update
+                        });
+                    });
+
+                    document.getElementById("twitterShare").addEventListener('click', (e) => {
+                        e.preventDefault(); // Prevent immediate redirect
+                        incrementShareCount().then(() => {
+                            window.location.href = twitterLink; // Redirect after the share count update
+                        });
+                    });
+
+                    document.getElementById("linkedinShare").addEventListener('click', (e) => {
+                        e.preventDefault(); // Prevent immediate redirect
+                        incrementShareCount().then(() => {
+                            window.location.href = linkedinLink; // Redirect after the share count update
+                        });
+                    });
+                } else {
+                    console.error("One or more required values are undefined: currentUrl, desktopMessage, blogImage");
+                }
+            }
+        });
+
+        // Close the modal when clicking outside of it or on a social media link
+        document.addEventListener("click", (event) => {
+            if (!shareBtn.contains(event.target) && !shareModal.contains(event.target)) {
+                shareModal.classList.add("hidden");
+            }
+        });
+
+        // Function to increment the share count
+        function incrementShareCount() {
+            return fetch(`/api/shares/${blogId}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    shareCountElement.textContent = formatNumber(data.shares); // Update share count display
+                })
+                .catch((error) => console.error('Error incrementing share count:', error));
+        }
+        });
+        </script>
+
+</body>
+
+
+</html>

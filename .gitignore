@@ -1,8 +1,11 @@
 # Ignore node_modules directory
 node_modules/
 
-# Ignore all HTML files
-public/*.html
+# Ignore all HTML files outside the public folder
+*.html
+
+# Don't ignore HTML files inside the public folder
+!public/*.html
 
 # Ignore log files
 *.log
