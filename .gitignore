@@ -1,0 +1,20 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore all HTML files
+public/*.html
+
+# Ignore log files
+*.log
+
+# Ignore environment variables file (if exists)
+.env
+
+# Ignore build and temp files
+dist/
+build/
+
+# Ignore OS and IDE specific files
+.DS_Store         # macOS
+Thumbs.db         # Windows
+.vscode/          # Visual Studio Code
